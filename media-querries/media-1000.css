@@ -1,0 +1,20 @@
+section::after,section::before,header::after{
+    display: none;
+}
+
+section{
+    padding: 50px;
+}
+
+nav{
+    width: 100%;
+    right: 0;
+}
+
+nav ul{
+    width: unset;
+}
+
+h1,h3{
+    top: 19%;
+}
