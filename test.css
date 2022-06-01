@@ -181,3 +181,8 @@ span {
 .btn:hover .arrow3 {
     display: block;
 }
+
+section:nth-of-type(1) ul li a figure {
+    height: 50%;
+    width: 50%;
+}
