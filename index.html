@@ -1,80 +1,255 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+    <head>
 
-    <title>Loris Labarre</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/normalizer.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="media-querries/media-1000.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 750px)" href="media-querries/media-750.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="media-querries/media-600.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 400px)" href="media-querries/media-400.css"/>
-    <script src="https://code.createjs.com/easeljs-0.7.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <title>Loris Labarre</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/normalizer.css" />
+        <link rel="stylesheet" href="css/fullpage.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" media="screen and (max-width: 1000px)" href="media-querries/media-1000.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 750px)" href="media-querries/media-750.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="media-querries/media-600.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 400px)" href="media-querries/media-400.css"/>
+        <script src="https://code.createjs.com/easeljs-0.7.1.min.js"></script>
+        <script type="text/javascript" src="fullpage.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/akm2/simplex-noise.js/master/simplex-noise.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Comic+Neue:wght@300&family=Montserrat&family=Montserrat+Alternates&family=Oswald&family=Playball&display=swap" rel="stylesheet">
+    </head>
+    <body>
 
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Comic+Neue:wght@300&family=Montserrat&family=Montserrat+Alternates&family=Oswald&family=Playball&display=swap" rel="stylesheet">
-</head>
-<body>
-<canvas id="projector">Your browser does not support the Canvas element.</canvas>
-    <header>
-        
+        <div id="fullpage">
 
-        <nav>
+            <canvas id="projector">Your browser does not support the Canvas element.</canvas>
 
-            <ul>
+            <div class="section">
+                <header class="nav">
 
-                <li>
-                    <a href="#">
-                        Projets
+                    <a href="#" class="btn">
+                        <div class="arrow arrow1">
+                            <div class="arrow arrow2"></div>
+                            <span class="s1">olo</span>
+                            <span class="s2">X</span>
+                            <span class="s3">Dev</span>
+                            <div class="littleArrow arrow3"></div>
+                            <div class="littleArrow arrow4"></div>
+                        </div>
                     </a>
-                </li>
+                    
+
+                    <nav>
+
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    Projets
+                                </a>
+                            </li>
 
 
-                <li>
+                            <li>
 
-                    <a href="#">
-                        Parcours
-                    </a>
-                </li>
+                                <a href="#">
+                                    Parcours
+                                </a>
+                            </li>
 
 
-                <li>
-                    <a href="#">
-                        Compétences
-                    </a>
-                </li>
+                            <li>
+                                <a href="#">
+                                    Compétences
+                                </a>
+                            </li>
 
-            </ul>
+                            <li>
+                                <a href="#">
+                                    Présentation
+                                </a>
+                            </li>
 
-        </nav>
-    </header>
+                        </ul>
 
-    <section>
+                    </nav>
+                </header>
 
-        <h1>
-            Labarre Loris
-        </h1>
 
-        <h3>
-            Developpeur FULL Stack
-        </h3>
+                <section>
 
-        <div id="community">
-            <a href="https://github.com/LoloxDev">
-                <img src="img/icons8-githubb.svg" alt="Icone de github">
-            </a>
-            <a href="https://www.linkedin.com/in/loris-labarre/">
-                <img src="img/icons8-linkedin-entouré.svg" alt="Icone de linkedin">
-            </a>
+                    
+
+                    <h1>
+                        Labarre Loris
+                    </h1>
+
+                    <h3>
+                        Développeur FULL Stack
+                    </h3>
+
+                    <div id="community">
+                        <a href="https://github.com/LoloxDev">
+                            <img src="img/icons8-githubb.svg" alt="Icone de github">
+                        </a>
+                        <a href="https://www.linkedin.com/in/loris-labarre/">
+                            <img src="img/icons8-linkedin-entouré.svg" alt="Icone de linkedin">
+                        </a>
+                    </div>
+
+                    <div class="bottom">
+                        <img src="img/icons8-double-bas-64.png" alt="Fleche"/>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <section class="section">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <figure id="Jadoo">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <figure id="Reservia">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <figure id="Springfield">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <figure id="Enolo">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <figure id="Gites">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                    </svg>
+                </div>
+                    
+
+            </section>
+
+            <section class="section">
+            </section>
+
+            <section class="section">
+            </section>
+
+            <section class="section">
+            </section>
+
         </div>
+        <div id="fp-nav" class="fp-right">
+            <ul>
+                <li>
+                    <a href="#page1" class="">
+                        <span class="fp-sr-only">
+                            fullPage
+                        </span>
+                        <span>
 
-    </section>
-    <script type="text/javascript" src="main.js"></script>
-</body>
+                        </span>
+                    </a>
+                    <div class="fp-tooltip fp-right">
+                        fullPage
+                    </div>
+                </li>
+                
+                <li>
+                    <a href="#page2" class="">
+                        <span class="fp-sr-only">
+                            Open
+                        </span>
+                        <span>
+
+                        </span>
+                    </a>
+                    <div class="fp-tooltip fp-right">
+                        Open
+                    </div>
+                </li>
+                <li>
+                    <a href="#page3" class="active">
+                        <span class="fp-sr-only">
+                            Easy
+                        </span>
+                        <span>
+
+                        </span>
+                    </a>
+                    <div class="fp-tooltip fp-right">
+                        Easy
+                    </div>
+                </li>
+                <li>
+                    <a href="#page4" class="">
+                        <span class="fp-sr-only">
+                            Touch
+                        </span>
+                        <span>
+
+                        </span>
+                    </a>
+                    <div class="fp-tooltip fp-right">
+                        Touch
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="canva1.js"></script>
+        
+    </body>
 </html>

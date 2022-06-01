@@ -3,9 +3,248 @@ body{
 	font-family: 'Montserrat';
 }
 
+.fp-watermark{
+	display: none !important;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes rotate-scale-down-ver {
+	0% {
+		-webkit-transform: scale(1) rotateY(0);
+				transform: scale(1) rotateY(0);
+	  }
+	  30% {
+		-webkit-transform: scale(0.3) rotateY(180deg);
+				transform: scale(0.3) rotateY(180deg);
+	  }
+	  48% {
+		-webkit-transform: scale(1) rotateY(0deg);
+				transform: scale(1) rotateY(0deg);
+	  }
+	  51%{
+		  -webkit-transform: scale(1) rotateY(0deg);
+		  transform: scale(1) rotateY(0deg);
+		}
+	  100%{
+		  -webkit-transform: scale(1) rotateY(0deg);
+		  transform: scale(1) rotateY(0deg);
+	  }
+  }
+  @keyframes rotate-scale-down-ver {
+	0% {
+	  -webkit-transform: scale(1) rotateY(0)  translateX(0%);
+			  transform: scale(1) rotateY(0)  translateX(0%);
+	}
+	30% {
+	  -webkit-transform: scale(1.2) rotateY(180deg) translateY(160%);
+			  transform: scale(1.2) rotateY(180deg) translateY(160%);
+	}
+	48% {
+	  -webkit-transform: scale(1) rotateY(0deg) translateY(-60%);
+			  transform: scale(1) rotateY(0deg) translateY(-60%);
+	}
+	51%{
+		-webkit-transform: scale(1) rotateY(0deg);
+		transform: scale(1) rotateY(0deg);
+	  }
+	100%{
+		-webkit-transform: scale(1) rotateY(0deg);
+		transform: scale(1) rotateY(0deg);
+	}
+  }
+  
+
+/* LOGO */
+
+.btn {
+    text-decoration: none;
+
+    font-size: 1.4rem;
+
+    color: silver;
+
+    display: flex;
+
+    align-items: center;
+
+    margin: auto;
+
+    width: 500px;
+	position: absolute;
+	top:61.5px;
+	left:159px;
+	height: 78px;
+}
+
+.btn .arrow {
+    margin-right: 1em;
+
+    height: 2px;
+
+    width: 3em;
+
+    position: relative;
+
+    background: silver;
+
+    transition: all 0.2s;
+}
+
+.btn .arrow::before,
+.btn .arrow::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    background: silver;
+
+    height: 1.5px;
+    width: 28px;
+}
+
+.btn .arrow::before {
+    transform: rotate(45deg);
+
+    transform-origin: right bottom;
+}
+
+.btn .arrow::after {
+    transform: rotate(-45deg);
+
+    transform-origin: right top;
+}
+
+.btn:hover .arrow1 {
+    width: 30em;
+    font-size: 2em;
+}
+
+.arrow2 {
+    transform-origin: left;
+    transform: rotate(-60deg);
+    width: 100px !important;
+}
+
+header span {
+    position: absolute;
+    bottom: -14px;
+    font-size: 1.3em;
+    display: none;
+}
+
+.btn:hover span {
+    display: inline;
+}
+
+.s1 {
+    left: 15%;
+}
+
+.s2 {
+    left: 40%;
+    bottom: -43px;
+}
+
+.s3 {
+    left: 55%;
+}
+
+.littleArrow {
+    margin-right: 1em;
+
+    height: 0.1em;
+
+    width: 5em;
+
+    position: relative;
+
+    background: silver;
+
+    transition: all 0.2s;
+}
+
+.littleArrow::before,
+.littleArrow::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    background: silver;
+
+    height: 0.1em;
+
+    width: 0.6em;
+}
+
+.littleArrow::before {
+    transform: rotate(45deg);
+
+    transform-origin: right bottom;
+}
+
+.littleArrow::after {
+    transform: rotate(-45deg);
+
+    transform-origin: right top;
+}
+
+.btn:hover .littleArrow {
+    font-size: 2em;
+}
+
+.arrow3 {
+    bottom: 51px;
+    height: 3.9px;
+    width: 82px;
+    left: 71.7%;
+    transform: rotate(-65deg);
+    display: none;
+}
+
+.arrow4::after,
+.arrow4::before,
+.arrow3::after,
+.arrow3::before {
+    height: 3px;
+    width: 26px;
+}
+
+.arrow4 {
+    bottom: 115px;
+    transform: rotate(180deg);
+    height: 3px;
+    left: 30%;
+    top: -57px;
+    width: 70px;
+    transform-origin: right bottom;
+    display: none;
+}
+
+.btn:hover .arrow4,
+.btn:hover .arrow3 {
+    display: block;
+}
+
+
+/* FIN LOGO */
+
+
+
 header{
 	height: 200px;
-	position: relative;
+    width: 100%;
+	position: fixed;
+	top: 20px;
+	left:0;
 }
 
 nav ul{
@@ -39,9 +278,12 @@ nav{
 }
 
 section{
-	height: 100%;
+	height: 100vh;
 	color: silver;
+	padding: 122px 160px;
 }
+
+
 
 section::after{
 	content: "";
@@ -69,7 +311,7 @@ h1,h3{
 	margin: auto !important;
 	width: fit-content;
 	position: relative;
-	top: 22%;
+	top: 42%;
 }
 
 h1{
@@ -116,7 +358,6 @@ html, body{
 	height:100%; 
 	padding:0px; 
 	margin:0px;
-	overflow: hidden;
 	background: #191d1e; /* Old browsers */
 	background: -moz-linear-gradient(0deg,  #191d1e 50%, #283139 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#191d1e), color-stop(100%,#283139)); /* Chrome,Safari4+ */
@@ -189,3 +430,123 @@ html, body{
 	background-color: rgb(39,163,194,0.2);
 	transform: scale(1.1);
 }
+
+.bottom{
+margin: auto;
+display: flex;
+position: absolute;
+left: 50%;
+margin-left: -20px;
+bottom: 4%;
+width: 40px;
+-webkit-animation: rotate-scale-down-ver 5s linear infinite both;
+animation: rotate-scale-down-ver 5s linear infinite both;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background-color: silver !important;
+}
+
+/* SECTION 2 */
+
+section:nth-of-type(1) ul{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+section:nth-of-type(1) ul li{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(226,56,251,1) 23%, rgba(31,107,255,1) 100%);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+section:nth-of-type(1) ul li:hover{
+transform: scale(1.1);
+}
+
+/* BULLES */
+
+section:nth-of-type(1) ul li:first-of-type{
+left: 10%;
+top: 25%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(2){
+left: 25%;
+top: 55%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(3){
+left: 42%;
+top: 25%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(4){
+right: 25%;
+top: 55%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(5){
+right: 10%;
+top: 25%;
+}
+
+/* VAGUES */
+
+.waves {
+	position:relative;
+	width: 100%;
+	height:15vh;
+	margin-bottom:-7px; /*Fix for safari gap*/
+	min-height:100px;
+	max-height:150px;
+	background: radial-gradient(circle, rgba(226,56,251,1) 23%, rgba(31,107,255,1) 100%);
+  }
+  /* Animation */
+  
+  .parallax > use {
+	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+	animation-delay: -5s;
+	animation-duration: 20s;
+  }
+  @keyframes move-forever {
+	0% {
+	 transform: translate3d(-90px,0,0);
+	}
+	100% { 
+	  transform: translate3d(85px,0,0);
+	}
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+	.waves {
+	  height:40px;
+	  min-height:40px;
+	}
+	.content {
+	  height:30vh;
+	}
+	h1 {
+	  font-size:24px;
+	}
+  }
+
