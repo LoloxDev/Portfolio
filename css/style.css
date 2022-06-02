@@ -494,15 +494,13 @@ section:nth-of-type(1) ul li {
     height: 150px;
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(226, 56, 251, 1) 23%,
-        rgba(31, 107, 255, 1) 100%
-    );
+    background: #303030;
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
 }
+
+
 
 section:nth-of-type(1) ul li:hover {
     animation: logo-animation 2s ease-in-out;
@@ -540,17 +538,24 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
 /* VAGUES */
 
 .waves {
-    position: relative;
+    position: absolute;
+    bottom:0;
     width: 100%;
-    height: 15vh;
+    height: 0%;
     margin-bottom: -7px; /*Fix for safari gap*/
-    min-height: 100px;
+    min-height: 0;
     max-height: 150px;
     background: radial-gradient(
         circle,
         rgba(226, 56, 251, 1) 23%,
         rgba(31, 107, 255, 1) 100%
     );
+    transition: all 1s linear 3s;
+}
+
+.wavesbox {
+    background-color: #303030;
+    position: relative;
 }
 /* Animation */
 
@@ -597,26 +602,131 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
 
 section:nth-of-type(1) figure {
     position: absolute;
-    top: 25%;
-    left: 25%;
-    height: 50%;
-    width: 50%;
+    height: 0%;
+    width: 100%;
     overflow: hidden;
+    z-index: 10;
+    background: radial-gradient( circle, rgba(226, 56, 251, 1) 23%, rgba(31, 107, 255, 1) 100% );
 }
 
 section:nth-of-type(1) figure img {
     object-fit: contain;
 }
 
-#Springfield {
-    top: unset;
-    bottom: 0;
-    height: 70%;
+#Springfield img {
+    height: 100%;
 }
 
-#Gites {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
+#Jadoo img{
+ width: 50%;
+ height: 50%;
+ margin: 35px auto;
+
 }
+
+.jauge {
+    width: 10px;
+    height: 370px;
+    display: block;
+    background-color: #303030;
+    position: absolute;
+    z-index: -1;
+}
+
+.jauge-remplissage2 {
+    
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    background: radial-gradient( circle, rgba(226, 56, 251, 1) 23%, rgba(31, 107, 255, 1) 100% );
+    
+}
+
+.j1 {
+    left: 49.7%;
+    top:0;
+}
+
+.j2 {
+    left:40%;
+    top:30%;
+    transform: rotate(50deg);
+}
+
+.j3 {
+    left:30%;
+    top:30%;
+    transform: rotate(130deg);
+
+}
+
+.j4 {
+    right:40%;
+    top:30%;
+    transform: rotate(-50deg);
+}
+
+.j5 {
+    right:30%;
+    top:30%;
+    transform: rotate(-130deg);
+}
+
+.j6 {
+    right:22%;
+    bottom:16%;
+    top:unset
+}
+
+.j7 {
+    left:22%;
+    bottom:16%;
+    top:unset;
+}
+
+/* remplissages */
+
+
+.active .r1,.active .r2,.active .r3,.active .r4,.active .r5,.active .r6,.active .r7, .active figure{
+    height: 100% !important;
+}
+
+.active .waves {
+    height: 100px !important;
+}
+
+.active li:nth-of-type(3) figure{
+    transition: all 0.3s linear 1.2s;
+}
+
+.active li:nth-of-type(2) figure, .active li:nth-of-type(4) figure{
+    transition: all 0.3s linear 1.8s;
+}
+
+.active li:first-of-type figure, .active li:nth-of-type(5) figure{
+    transition: all 0.3s linear 2.2s;
+}
+
+.r1{
+    transition: all 0.3s linear 1s;
+}
+
+.r2, .r4{
+
+    transition: all 0.3s linear 1.5s;
+    
+}
+
+.r3, .r5{
+
+    transition: all 0.3s linear 2s;
+    
+}
+
+.r6, .r7{
+
+    transition: all 0.3s linear 2.5s;
+    
+}
+
+
