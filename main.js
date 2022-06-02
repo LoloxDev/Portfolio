@@ -1,6 +1,5 @@
 // Run FULLSCREEN
 
-new fullpage('#fullpage', {
-	ancres :['firstPage','secondPage','thirdPage']
-  });
-
+new fullpage("#fullpage", {
+    ancres: ["sec2", "secondPage", "thirdPage"],
+});
