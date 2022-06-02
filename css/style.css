@@ -538,7 +538,6 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
 /* VAGUES */
 
 .waves {
-    position: absolute;
     bottom:0;
     width: 100%;
     height: 0%;
@@ -550,12 +549,13 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
         rgba(226, 56, 251, 1) 23%,
         rgba(31, 107, 255, 1) 100%
     );
-    transition: all 1s linear 3s;
+    transition: all 5s linear 3s;
 }
 
 .wavesbox {
     background-color: #303030;
     position: relative;
+    bottom: 0;
 }
 /* Animation */
 
@@ -625,8 +625,8 @@ section:nth-of-type(1) figure img {
 }
 
 .jauge {
-    width: 10px;
-    height: 370px;
+    width: 4px;
+    height: 300px;
     display: block;
     background-color: #303030;
     position: absolute;
@@ -643,45 +643,48 @@ section:nth-of-type(1) figure img {
 }
 
 .j1 {
-    left: 49.7%;
+    left: 49.9%;
     top:0;
+    height:400px;
 }
 
 .j2 {
-    left:40%;
+    left:45%;
     top:30%;
-    transform: rotate(50deg);
+    transform: rotate(40deg);
 }
 
 .j3 {
-    left:30%;
+    left:27%;
     top:30%;
-    transform: rotate(130deg);
+    transform: rotate(140deg);
 
 }
 
 .j4 {
-    right:40%;
+    right:45%;
     top:30%;
-    transform: rotate(-50deg);
+    transform: rotate(-40deg);
 }
 
 .j5 {
-    right:30%;
+    right:27%;
     top:30%;
-    transform: rotate(-130deg);
+    transform: rotate(-140deg);
 }
 
 .j6 {
     right:22%;
-    bottom:16%;
-    top:unset
+    bottom:18%;
+    top:unset;
+    height: 417px;
 }
 
 .j7 {
     left:22%;
-    bottom:16%;
+    bottom:18%;
     top:unset;
+    height: 417px;
 }
 
 /* remplissages */
@@ -692,7 +695,9 @@ section:nth-of-type(1) figure img {
 }
 
 .active .waves {
-    height: 100px !important;
+    height: 50px !important;
+    position: absolute;
+    bottom: 30px;
 }
 
 .active li:nth-of-type(3) figure{
@@ -730,3 +735,43 @@ section:nth-of-type(1) figure img {
 }
 
 
+.fp-viewing-2 header nav ul li:nth-of-type(1) a {
+    color:rgb(39, 163, 194);
+}
+
+.fp-viewing-3 header nav ul li:nth-of-type(2) a {
+    color:rgb(39, 163, 194);
+}
+
+.fp-viewing-4 header nav ul li:nth-of-type(3) a {
+    color:rgb(39, 163, 194);
+}
+
+.fp-viewing-5 header nav ul li:nth-of-type(4) a {
+    color:rgb(39, 163, 194);
+}
+
+
+/* Présentation */
+
+.myHistory{
+    position: initial;
+    margin: 100px auto !important;
+}
+
+.myHistory::after{
+    width: 5%;
+    top: 24%;
+    right: 549px;
+    left:unset;
+}
+
+.myHistory::before{
+    width: 5%;
+    top: 24%;
+    left: 549px;
+}
+
+.myHistory + p {
+    margin: 100px;
+}
