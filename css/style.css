@@ -76,12 +76,13 @@ body {
     }
 }
 
+
 /* LOGO */
 
 .btn {
     text-decoration: none;
 
-    font-size: 1.4rem;
+    font-size: 1rem;
 
     color: silver;
 
@@ -141,14 +142,14 @@ body {
 }
 
 .btn:hover .arrow1 {
-    width: 30em;
+    width: 8em;
     font-size: 2em;
 }
 
 .arrow2 {
     transform-origin: left;
     transform: rotate(-60deg);
-    width: 100px !important;
+    width: 80px !important;
 }
 
 header span {
@@ -163,12 +164,12 @@ header span {
 }
 
 .s1 {
-    left: 15%;
+    left: 13%;
 }
 
 .s2 {
-    left: 40%;
-    bottom: -43px;
+    left: 41%;
+    bottom: -31px;
 }
 
 .s3 {
@@ -224,9 +225,9 @@ header span {
 
 .arrow3 {
     bottom: 51px;
-    height: 3.9px;
-    width: 82px;
-    left: 71.7%;
+    height: 2.5px;
+    width: 55px;
+    left: 80%;
     transform: rotate(-65deg);
     display: none;
 }
@@ -243,9 +244,9 @@ header span {
     bottom: 115px;
     transform: rotate(180deg);
     height: 3px;
-    left: 30%;
-    top: -57px;
-    width: 70px;
+    left: 23%;
+    top: -37px;
+    width: 44px;
     transform-origin: right bottom;
     display: none;
 }
@@ -267,7 +268,7 @@ header {
 
 nav ul {
     display: flex;
-    width: 500px;
+    width: 600px;
     justify-content: space-around;
     font-size: 1.1em;
     position: sticky;
@@ -288,9 +289,54 @@ nav ul li:hover {
 
 nav {
     position: absolute;
-    right: 15%;
+    right: 10%;
     top: 45%;
 }
+
+.cup {
+
+    transform: rotate(0deg);
+    margin-left: 20px;
+    width: 50px;
+    height: 60px;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: url("../img/wave.png");
+    background-size: 250%;
+    background-position: 50px 0px;
+    background-repeat: repeat-x;
+    animation: filling 15s ease-in-out infinite;
+    box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+    
+  }
+  
+  .cup:before {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 38px;
+    border: 6px solid #fff;
+    right: -35px;
+    top: 15px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+
+  }
+
+  .cup:hover{
+      transform: rotate(1080deg);
+      transition: 1s;
+  }
+  
+  @keyframes filling {
+    30% {background-position: 200px 30px;}
+    50% {background-position: 100px 15px;}
+    80% {background-position: -100px 10px;}
+    to {background-position: 50px 0px;}
+  }
 
 section {
     height: 100vh;
@@ -326,10 +372,12 @@ h3 {
     width: fit-content;
     position: relative;
     top: 42%;
+    z-index: -1;
 }
 
 h1 {
     font-size: 4em;
+    
 }
 
 h3::before {
@@ -549,7 +597,7 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
         rgba(226, 56, 251, 1) 23%,
         rgba(31, 107, 255, 1) 100%
     );
-    transition: all 5s linear 3s;
+    transition: all 1s linear 3s;
 }
 
 .wavesbox {
@@ -774,4 +822,474 @@ section:nth-of-type(1) figure img {
 
 .myHistory + p {
     margin: 100px;
+}
+
+.gridContain{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 50px;
+    grid-template-areas: 
+    "title title title"
+    "HTML CSS JS"
+    "SQL PHP BOOT";
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 32%;
+    margin-left: -200px;
+    z-index: 10;
+
+}
+
+.gridContain figure {
+    width: 100px;
+}
+
+.gridContain h4{
+    grid-area: title;
+    position: relative;
+}
+
+.gridContain figure:first-of-type{
+    grid-area: HTML;
+}
+
+.gridContain figure:nth-of-type(2){
+    grid-area: CSS;
+}
+
+.gridContain figure:nth-of-type(3){
+    grid-area: JS;
+}
+
+
+.gridContain figure:nth-of-type(4){
+    grid-area: SQL;
+}
+
+
+.gridContain figure:nth-of-type(5){
+    grid-area: PHP;
+}
+
+
+.gridContain figure:nth-of-type(6){
+    grid-area: BOOT;
+}
+
+.gridContain h4::after{
+content: "";
+position: absolute;
+height: 1px;
+width: 0%;
+background: silver;
+left: 0;
+top: 40px;
+animation: width 2s infinite;
+text-shadow: black 1px 1px 5px;
+}
+
+.gridContain h4::before{
+
+content: "";
+position: absolute;
+height: 1px;
+width: 0%;
+background: silver;
+right: 0;
+bottom: 40px;
+animation: width 2s infinite;
+    
+}
+
+@keyframes width {
+    0%{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+}
+
+/* aquarium */
+
+#octocat {
+    height: 300px;
+    width: 200px;
+    background: url(https://codinhood.com/static/9a146dac647e7129fa173acc0b0d437f/299c1/octocat.png) left center;
+    animation: animateSprite 15s steps(1) infinite, swim 15s ease-in-out infinite;
+    position: absolute;
+    right: -200px;
+    top: 50%;
+    margin-top: -150px;
+    z-index: 100;
+  }
+  
+  
+  @keyframes animateSprite {
+    0% {
+      background-position: -600px; /* Starting position moving left sprite */
+    }
+    20% {
+      background-position: 0px; /* Straight on sprite */
+    }
+    25% {
+      background-position: -200px; /* Moving up sprite */
+    }
+    35% {
+      background-position: -400px; /* Moving right sprite */
+    }
+    40% {
+      background-position: -400px;
+    }
+    50% {
+      background-position: -200px;  /* Moving up sprite */
+    }
+    60% {
+      background-position: -0px; /* Straight on sprite */
+    }
+    67% {
+      background-position: -600px; /* Moving up sprite */
+    }
+  
+    100% {
+      background-position: -600px;
+    }
+  }
+  
+  @keyframes swim {
+    0% {
+      transform: translate(0, 0); /* Starting position */
+    }
+    20% {
+      transform: translate(calc(-50vw - 100px), 0); /* Animate to center of screen */
+    }
+    25% {
+      transform: translate(calc(-50vw - 100px), 0); /* Stay at the center for 1 second */
+    }
+    35% {
+      transform: translate(calc(-50vw - 100px), -20vh); /* Animate up for 2 seconds */
+    }
+    50% {
+      transform: translate(-25vw, 15vh); /* Animate bottom right for 3 seconds */
+    }
+    60% {
+      transform: translate(-25vw, -20vh); /* Animate up at right of the screen */
+    }
+    67% {
+      transform: translate(-25vw, -20vh);
+    }
+  
+    100% {
+      transform: translate(calc(-100vw - 300px), 0); /* Animate past left past the screen */
+    }
+  }
+  .ocean {
+    position: relative;
+    height: 100%;
+    /* top: -2px; */
+    background-image: linear-gradient(0deg, #182848, #2980b9);
+    border-radius: 10%;
+  }
+  
+  .bubble {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: white;
+    bottom: -30px;
+    opacity: 0.2;
+    animation: bubble 15s ease-in-out infinite,
+      sideWays 4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: translateY(0%);
+      opacity: 0.06;
+    }
+    100% {
+      transform: translateY(-120vh);
+    }
+  }
+  
+  @keyframes sideWays {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 200px;
+    }
+  }
+  
+  .bubble--1 {
+    left: 10%;
+    animation-delay: 0.5s;
+    animation-duration: 16s;
+    opacity: 0.2;
+  }
+  
+  .bubble--2 {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    opacity: 0.1;
+  }
+  
+  .bubble--3 {
+    width: 10px;
+    height: 10px;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+    opacity: 0.3;
+  }
+  
+  .bubble--4 {
+    width: 25px;
+    height: 25px;
+    left: 40%;
+    animation-delay: 8s;
+    animation-duration: 17s;
+    opacity: 0.2;
+  }
+  
+  .bubble--5 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    animation-delay: 10s;
+    animation-duration: 15s;
+    opacity: 0.1;
+  }
+  
+  .bubble--6 {
+    width: 10px;
+    height: 10px;
+    left: 80%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+    opacity: 0.4;
+  }
+  
+  .bubble--7 {
+    width: 15px;
+    height: 15px;
+    left: 90%;
+    animation-delay: -7s;
+    animation-duration: 25s;
+    opacity: 0.3;
+  }
+  
+  .bubble--9 {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: 30px;
+    animation-delay: -5s;
+    animation-duration: 19s;
+    opacity: 0.2;
+  }
+  
+  .bubble--10 {
+    width: 40px;
+    height: 40px;
+    left: 30%;
+    bottom: 30px;
+    animation-delay: -21s;
+    animation-duration: 16s;
+    opacity: 0.3;
+  }
+  
+  .bubble--11 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    bottom: 30px;
+    animation-delay: -13.75s;
+    animation-duration: 20s;
+    opacity: 0.3;
+  }
+  
+  .bubble--11 {
+    width: 25px;
+    height: 25px;
+    left: 90%;
+    bottom: 30px;
+    animation-delay: -10.5s;
+    animation-duration: 19s;
+    opacity: 0.3;
+  }
+
+  .fp-viewing-4 nav{
+      top: 40%;
+  }
+  
+/* TEST FORM */ 
+
+.login-popup {
+    text-align: center;
+    z-index: 9999;
+    height: 100%;
+  }
+  /* Masquez la forme Popup */
+  .form-popup {
+    display: none;
+    z-index: 9;
+    height: 100%;
+  }
+  /* Styles pour le conteneur de la forme */
+  .form-container {
+    padding: 20px;
+    background-color: #fff;
+    height: 100%;
+    margin-top: -50px;
+  }
+  /* Largeur complète pour les champs de saisie */
+  .form-container input[type="text"],
+  .form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #eee;
+  }
+  /* Quand les entrées sont concentrées, faites quelque chose */
+  .form-container input[type="text"]:focus,
+  .form-container input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  /* Stylez le bouton de connexion */
+  .form-container .btnForm {
+    background-color: #8ebf42;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  /* Stylez le bouton pour annuler */
+  .form-container .cancel {
+    background-color: #cc0000;
+  }
+  /* Planez les effets pour les boutons */
+  .form-container .btnForm:hover,
+  .open-button:hover {
+    opacity: 1;
+  }
+
+  .open-btn{
+    position: absolute;
+    left: 43.5%;
+    bottom: 10%;
+    
+}
+
+
+/* test button form */
+
+.portfolio-experiment a {
+    color: white;
+    padding: 0.7em calc(0.7em * 1.2);
+    display: inline-block;
+    border: 3px solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+}
+.portfolio-experiment a .text {
+    font-family: proxima-nova, monospace;
+    transform: translate3d(0, 0.7em, 0);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    background: transparent;
+    border: none;
+    color: silver;
+    cursor: pointer;
+}
+.portfolio-experiment a:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: radial-gradient( circle, rgba(226, 56, 251, 1) 23%, rgba(31, 107, 255, 1) 100% );
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transform-origin: left;
+}
+.portfolio-experiment .line {
+    position: absolute;
+    background:silver;
+}
+.portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    transform: scale3d(1, 0, 1);
+}
+.portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    transform: scale3d(0, 1, 1);
+}
+.portfolio-experiment .line.-right {
+    right: -3px;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transform-origin: top;
+}
+.portfolio-experiment .line.-top {
+    top: -3px;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
+}
+.portfolio-experiment .line.-left {
+    left: -3px;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
+}
+.portfolio-experiment .line.-bottom {
+    bottom: -3px;
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transform-origin: right;
+}
+.portfolio-experiment a:hover .text, .portfolio-experiment a:active .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.portfolio-experiment a:hover:after, .portfolio-experiment a:active:after {
+    transform: scale3d(0, 1, 1);
+    right: -3px;
+    left: -3px;
+    transform-origin: right;
+    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+.portfolio-experiment a:hover .line, .portfolio-experiment a:active .line {
+    transform: scale3d(1, 1, 1);
+}
+.portfolio-experiment a:hover .line.-right, .portfolio-experiment a:active .line.-right {
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transform-origin: bottom;
+}
+.portfolio-experiment a:hover .line.-top, .portfolio-experiment a:active .line.-top {
+    transition: transform 0.08s linear 0.4s;
+    transform-origin: right;
+}
+.portfolio-experiment a:hover .line.-left, .portfolio-experiment a:active .line.-left {
+    transition: transform 0.08s linear 0.48s;
+    transform-origin: top;
+}
+.portfolio-experiment a:hover .line.-bottom, .portfolio-experiment a:active .line.-bottom {
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transform-origin: left;
 }

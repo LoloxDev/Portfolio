@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/fullpage.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
         <link
             rel="stylesheet"
             media="screen and (max-width: 1000px)"
@@ -78,6 +79,8 @@
                             <li>
                                 <a href="#"> Présentation </a>
                             </li>
+
+                            <div class="cup"></div>
                         </ul>
                     </nav>
                 </header>
@@ -100,7 +103,38 @@
                                 alt="Icone de linkedin"
                             />
                         </a>
+
                     </div>
+
+                    <div class="open-btn portfolio-experiment" id="openBtn">
+                        <a>
+                            <button class="open-button text" onclick="openForm()"><strong>Contactez moi</strong></button>
+                            <span class="line -right"></span>
+                            <span class="line -top"></span>
+                            <span class="line -left"></span>
+                            <span class="line -bottom"></span>
+                        </a>
+                    </div>
+                    
+
+                    <div class="login-popup">
+                        <div class="form-popup" id="popupForm">
+                          <form action="/action_page.php" class="form-container">
+                            <h2>Veuillez vous connecter</h2>
+                            <label for="email">
+                              <strong>E-mail</strong>
+                            </label>
+                            <input type="text" id="email" placeholder="Votre Email" name="email" required />
+                            <label for="psw">
+                              <strong>Mot de passe</strong>
+                            </label>
+                            <input type="password" id="psw" placeholder="Votre Mot de passe" name="psw" required />
+                            <button type="submit" class="btnForm">Connecter</button>
+                            <button type="button" class="btnForm cancel" onclick="closeForm()">Fermer</button>
+                          </form>
+                        </div>
+                      </div>
+
 
                     <div class="bottom">
                         <img src="img/icons8-double-bas-64.png" alt="Fleche" />
@@ -287,38 +321,42 @@
 
                 <div class="gridContain">
 
+                    <h4>
+                        Mes compétences en programation
+                    </h4>
+
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="akar-icons:html-fill" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            HTML
                         </figcaption>
 
                     </figure>
 
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="akar-icons:css-fill" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            CSS
                         </figcaption>
                     </figure>
 
 
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="akar-icons:javascript-fill" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            JavaScript
                         </figcaption>
                     </figure>
 
 
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="cib:mysql" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            MySQL
                         </figcaption>
                         
                     </figure>
@@ -326,22 +364,39 @@
 
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="akar-icons:php-fill" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            PHP
                         </figcaption>
                     </figure>
 
 
                     <figure>
 
-                        <img src="" alt=""/>
+                        <span class="iconify" data-icon="akar-icons:bootstrap-fill" style="color: #27a3c2; font-size: 100px;"></span>
                         <figcaption>
-
+                            Bootstrap
                         </figcaption>
 
                     </figure>
+                    
                 </div>
+
+                <div class="ocean">
+                    <div class="bubble bubble--1"></div>
+                    <div class="bubble bubble--2"></div>
+                    <div class="bubble bubble--3"></div>
+                    <div class="bubble bubble--4"></div>
+                    <div class="bubble bubble--5"></div>
+                    <div class="bubble bubble--6"></div>
+                    <div class="bubble bubble--7"></div>
+                    <div class="bubble bubble--8"></div>
+                    <div class="bubble bubble--9"></div>
+                    <div class="bubble bubble--10"></div>
+                    <div class="bubble bubble--11"></div>
+                    <div class="bubble bubble--12"></div>
+                    <div id="octocat"></div>
+                  </div>
 
             </section>
 
