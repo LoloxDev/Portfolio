@@ -103,38 +103,125 @@
                                 alt="Icone de linkedin"
                             />
                         </a>
-
                     </div>
 
                     <div class="open-btn portfolio-experiment" id="openBtn">
                         <a>
-                            <button class="open-button text" onclick="openForm()"><strong>Contactez moi</strong></button>
+                            <button
+                                class="open-button text"
+                                onclick="openForm()"
+                            >
+                                <strong>Contactez moi</strong>
+                            </button>
                             <span class="line -right"></span>
                             <span class="line -top"></span>
                             <span class="line -left"></span>
                             <span class="line -bottom"></span>
                         </a>
                     </div>
-                    
 
                     <div class="login-popup">
                         <div class="form-popup" id="popupForm">
-                          <form action="/action_page.php" class="form-container">
-                            <h2>Veuillez vous connecter</h2>
-                            <label for="email">
-                              <strong>E-mail</strong>
-                            </label>
-                            <input type="text" id="email" placeholder="Votre Email" name="email" required />
-                            <label for="psw">
-                              <strong>Mot de passe</strong>
-                            </label>
-                            <input type="password" id="psw" placeholder="Votre Mot de passe" name="psw" required />
-                            <button type="submit" class="btnForm">Connecter</button>
-                            <button type="button" class="btnForm cancel" onclick="closeForm()">Fermer</button>
-                          </form>
-                        </div>
-                      </div>
+                            <form
+                                action="mail.php"
+                                class="form-container"
+                                method="post"
+                            >
+                                <h2>Une idée ? Un projet ? Parlons-en !</h2>
 
+                                <label for="name">
+                                    <strong>Nom / Prenom</strong>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Nom/Prenom"
+                                    name="name"
+                                    required
+                                />
+
+                                <label for="email">
+                                    <strong>E-mail</strong>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Votre Email"
+                                    name="email"
+                                    required
+                                />
+
+                                <label for="tel">
+                                    <strong>Téléphone</strong>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="tel"
+                                    placeholder="Votre numéro de téléphone"
+                                    name="tel"
+                                />
+
+                                <div class="motif">
+                                    <label for="motif"></label>
+                                    <select
+                                        placeholder="Objet"
+                                        name="motif"
+                                        id="objet"
+                                        required
+                                    >
+                                        <option disabled hidden selected>
+                                            Objet
+                                        </option>
+                                        <option>
+                                            Je veux démarrer un projet
+                                        </option>
+                                        <option>
+                                            Je veux poser une question
+                                        </option>
+                                        <option>Je veux un devis</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+
+                                <label for="message">
+                                    <strong>Message</strong>
+                                </label>
+                                <textarea
+                                    rows="3"
+                                    id="msg"
+                                    placeholder="Votre Message"
+                                    name="msg"
+                                ></textarea>
+
+                                <input
+                                    type="checkbox"
+                                    id="valid"
+                                    name="valid"
+                                    checked
+                                    required
+                                />
+
+                                <label for="valid">
+                                    En soumettant ce formulaire, j'accepte que
+                                    les informations saisies soient exploitées
+                                    dans le cadre de la demande de contact et de
+                                    la relation commerciale qui peut en
+                                    découler.
+                                </label>
+
+                                <button type="submit" class="btnForm">
+                                    Envoyer
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btnForm cancel"
+                                    onclick="closeForm()"
+                                >
+                                    Fermer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
 
                     <div class="bottom">
                         <img src="img/icons8-double-bas-64.png" alt="Fleche" />
@@ -143,7 +230,6 @@
             </div>
 
             <section class="section a2">
-
                 <ul>
                     <li>
                         <a href="https://loloxdev.github.io/Jadoo/">
@@ -205,7 +291,6 @@
                             </figure>
                         </a>
                     </li>
-
                 </ul>
 
                 <a class="jauge j1" href="#">
@@ -213,23 +298,22 @@
                 </a>
                 <a class="jauge j2" href="#">
                     <span class="jauge-remplissage2 r2"></span>
-                </a> 
-                <a class="jauge j3" href="#"> 
+                </a>
+                <a class="jauge j3" href="#">
                     <span class="jauge-remplissage2 r3"></span>
-                </a> 
-                <a class="jauge j4" href="#"> 
+                </a>
+                <a class="jauge j4" href="#">
                     <span class="jauge-remplissage2 r4"></span>
-                </a> 
-                <a class="jauge j5" href="#"> 
+                </a>
+                <a class="jauge j5" href="#">
                     <span class="jauge-remplissage2 r5"></span>
-                </a> 
-                <a class="jauge j6" href="#"> 
+                </a>
+                <a class="jauge j6" href="#">
                     <span class="jauge-remplissage2 r6"></span>
-                </a> 
-                <a class="jauge j7" href="#"> 
+                </a>
+                <a class="jauge j7" href="#">
                     <span class="jauge-remplissage2 r7"></span>
-                </a> 
-
+                </a>
 
                 <div class="wavesbox">
                     <svg
@@ -277,109 +361,84 @@
             </section>
 
             <section class="section sec3">
+                <ul>
+                    <li></li>
 
-                        <ul>
-                            <li>
+                    <li></li>
 
-                            </li>
+                    <li></li>
 
-                            <li>
-                                
-                            </li>
+                    <li></li>
+                </ul>
 
-                            <li>
-                                
-                            </li>
+                <ul>
+                    <li></li>
 
-                            <li>
-                                
-                            </li>
-                        </ul>
+                    <li></li>
 
+                    <li></li>
 
-                        <ul>
-                            <li>
-
-                            </li>
-
-                            <li>
-                                
-                            </li>
-
-                            <li>
-                                
-                            </li>
-
-                            <li>
-                                
-                            </li>
-                        </ul>
-
+                    <li></li>
+                </ul>
             </section>
 
             <section class="section">
-
                 <div class="gridContain">
-
-                    <h4>
-                        Mes compétences en programation
-                    </h4>
+                    <h4>Mes compétences en programation</h4>
 
                     <figure>
-
-                        <span class="iconify" data-icon="akar-icons:html-fill" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            HTML
-                        </figcaption>
-
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:html-fill"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>HTML</figcaption>
                     </figure>
 
                     <figure>
-
-                        <span class="iconify" data-icon="akar-icons:css-fill" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            CSS
-                        </figcaption>
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:css-fill"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>CSS</figcaption>
                     </figure>
-
 
                     <figure>
-
-                        <span class="iconify" data-icon="akar-icons:javascript-fill" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            JavaScript
-                        </figcaption>
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:javascript-fill"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>JavaScript</figcaption>
                     </figure>
-
 
                     <figure>
-
-                        <span class="iconify" data-icon="cib:mysql" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            MySQL
-                        </figcaption>
-                        
+                        <span
+                            class="iconify"
+                            data-icon="cib:mysql"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>MySQL</figcaption>
                     </figure>
-
 
                     <figure>
-
-                        <span class="iconify" data-icon="akar-icons:php-fill" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            PHP
-                        </figcaption>
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:php-fill"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>PHP</figcaption>
                     </figure>
-
 
                     <figure>
-
-                        <span class="iconify" data-icon="akar-icons:bootstrap-fill" style="color: #27a3c2; font-size: 100px;"></span>
-                        <figcaption>
-                            Bootstrap
-                        </figcaption>
-
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:bootstrap-fill"
+                            style="color: #27a3c2; font-size: 100px"
+                        ></span>
+                        <figcaption>Bootstrap</figcaption>
                     </figure>
-                    
                 </div>
 
                 <div class="ocean">
@@ -396,15 +455,16 @@
                     <div class="bubble bubble--11"></div>
                     <div class="bubble bubble--12"></div>
                     <div id="octocat"></div>
-                  </div>
-
+                </div>
             </section>
 
             <section class="section">
-
                 <h3 class="myHistory">Mon histoire</h3>
-                <p>Anciennement cuisinier, j'ai décider de me réorienter vers le développement informatique car j'y ai découvert un univers passionant. </p>
-
+                <p>
+                    Anciennement cuisinier, j'ai décider de me réorienter vers
+                    le développement informatique car j'y ai découvert un
+                    univers passionant.
+                </p>
             </section>
         </div>
         <div id="fp-nav" class="fp-right">

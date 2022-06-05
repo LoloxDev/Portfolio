@@ -1,1 +1,3 @@
-Barre horizontale qui déscend de page en page et qui viendrait allimenter les bulles projets avec des effets aquatiques + remplir la mer en dessous.
+Responsive
+GRID formulaire
+finir les autres pages
