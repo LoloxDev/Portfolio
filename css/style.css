@@ -56,23 +56,37 @@ body {
 
 @keyframes logo-animation {
     20% {
-        transform: rotate(15deg) scale(1);
+        transform: rotate(15deg) scale(1) translateX(5%);
+    }
+    30% {
+        transform: rotate(-15deg) scale(0.9) translateX(-5%) translateY(5%);
     }
 
     40% {
-        transform: rotate(-10deg) scale(1.1);
+        transform: rotate(20deg) scale(0.9) translateX(5%) translateY(5%);
+    }
+
+    50% {
+        transform: rotate(-25deg) scale(0.9) translateX(-10%) translateY(-5%);
     }
 
     60% {
-        transform: rotate(5deg) scale(1.1);
+        transform: rotate(30deg) scale(0.8) translateX(5%) translateY(10%);
+    }
+    70% {
+        transform: rotate(-25deg) scale(0.9) translateX(-15%) translateY(5%);
     }
 
     80% {
-        transform: rotate(-5deg) scale(1.1);
+        transform: rotate(20deg) scale(0.9) translateX(-5%) translateY(5%);
+    }
+
+    90% {
+        transform: rotate(5deg) scale(0.9) translateX(5%) translateY(-5%);
     }
 
     to {
-        transform: rotate(0deg) scale(1.1);
+        transform: rotate(0deg) scale(1) translateX(0%);
     }
 }
 
@@ -270,7 +284,7 @@ nav ul {
     display: flex;
     width: 600px;
     justify-content: space-around;
-    font-size: 1.1em;
+    font-size: 0.9em;
     position: sticky;
 }
 
@@ -289,8 +303,8 @@ nav ul li:hover {
 
 nav {
     position: absolute;
-    right: 10%;
-    top: 25%;
+    right: 20%;
+    top: 30%;
     line-height: 80px;
 }
 
@@ -300,6 +314,9 @@ nav li:nth-of-type(5) img {
 
 .cup {
     transform: rotate(0deg);
+    position: absolute;
+    right: -70px;
+    top:0;
     margin-left: 20px;
     width: 50px;
     height: 60px;
@@ -381,12 +398,12 @@ h3 {
     margin: auto !important;
     width: fit-content;
     position: relative;
-    top: 42%;
+    top: 40%;
     z-index: -1;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 5em;
 }
 
 h3::before {
@@ -417,7 +434,7 @@ header::after {
     width: 8%;
     position: absolute;
     top: 100px;
-    right: 65%;
+    right: 70%;
     z-index: 50;
     background-color: silver;
 }
@@ -508,7 +525,23 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -65px;
-    bottom: 20%;
+    bottom: 22%;
+}
+
+.portrait {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+    margin-left: -50px;
+    z-index: -1;
+    transition: 1s;
+}
+
+.open-btn:hover .portrait {
+    bottom:50px !important;
+    transform: scale(0.7);
 }
 
 #community a img {
@@ -555,10 +588,12 @@ section:nth-of-type(1) ul li {
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
+    padding: 4px;
+    border: groove 5px white;
 }
 
-section:nth-of-type(1) ul li:hover {
-    animation: logo-animation 2s ease-in-out;
+section:nth-of-type(1) ul li:hover figure {
+    animation: logo-animation 1.5s ease-in-out;
     transform: scale(1.1);
 }
 
@@ -604,11 +639,10 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
         rgba(226, 56, 251, 1) 23%,
         rgba(31, 107, 255, 1) 100%
     );
-    transition: all 1s linear 3s;
+    
 }
 
 .wavesbox {
-    background-color: #303030;
     position: relative;
     bottom: 0;
 }
@@ -641,22 +675,9 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
         transform: translate3d(85px, 0, 0);
     }
 }
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-    .waves {
-        height: 40px;
-        min-height: 40px;
-    }
-    .content {
-        height: 30vh;
-    }
-    h1 {
-        font-size: 24px;
-    }
-}
+
 
 section:nth-of-type(1) figure {
-    position: absolute;
     height: 0%;
     width: 100%;
     overflow: hidden;
@@ -666,6 +687,7 @@ section:nth-of-type(1) figure {
         rgba(226, 56, 251, 1) 23%,
         rgba(31, 107, 255, 1) 100%
     );
+    border-radius: 50%;
 }
 
 section:nth-of-type(1) figure img {
@@ -683,12 +705,13 @@ section:nth-of-type(1) figure img {
 }
 
 .jauge {
-    width: 4px;
-    height: 300px;
+    width: 6px;
+    height: 310px;
     display: block;
     background-color: #303030;
     position: absolute;
     z-index: -1;
+    border: groove 1px white;
 }
 
 .jauge-remplissage2 {
@@ -706,12 +729,13 @@ section:nth-of-type(1) figure img {
     left: 49.9%;
     top: 0;
     height: 400px;
+    opacity: 0;
 }
 
 .j2 {
-    left: 45%;
-    top: 30%;
-    transform: rotate(40deg);
+    left: 42%;
+    top: 35%;
+    transform: rotate(50deg);
 }
 
 .j3 {
@@ -721,9 +745,9 @@ section:nth-of-type(1) figure img {
 }
 
 .j4 {
-    right: 45%;
-    top: 30%;
-    transform: rotate(-40deg);
+    right: 42%;
+    top: 35%;
+    transform: rotate(-50deg);
 }
 
 .j5 {
@@ -764,6 +788,7 @@ section:nth-of-type(1) figure img {
     position: absolute;
     bottom: 30px;
     border-radius: 0 0 50% 50%;
+    transition: all 1s linear 3s;
 }
 
 .active li:nth-of-type(3) figure {
@@ -780,22 +805,32 @@ section:nth-of-type(1) figure img {
     transition: all 0.3s linear 2.2s;
 }
 
-.r1 {
+.active .r1 {
     transition: all 0.3s linear 1s;
 }
 
-.r2,
-.r4 {
+.active .j1 {
+    animation: opacity 5s;
+}
+
+@keyframes opacity {
+    0% { opacity: 1;}
+    80% {opacity: 1;}
+    100% { opacity:0; }
+}
+
+.active .r2,
+.active .r4 {
     transition: all 0.3s linear 1.5s;
 }
 
-.r3,
-.r5 {
+.active .r3,
+.active .r5 {
     transition: all 0.3s linear 2s;
 }
 
-.r6,
-.r7 {
+.active .r6,
+.active .r7 {
     transition: all 0.3s linear 2.5s;
 }
 
@@ -995,6 +1030,7 @@ section:nth-of-type(1) figure img {
         width: 100%;
     }
 }
+
 
 /* aquarium */
 
@@ -1414,4 +1450,155 @@ section:nth-of-type(1) figure img {
 .portfolio-experiment a:active .line.-bottom {
     transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
     transform-origin: left;
+}
+
+/* Section Parcours */
+
+.sec3 h3{
+top: 20%;
+}
+
+#myLife{
+    width: 0%;
+    height: 2px;
+    background-color: silver;
+    position: relative;
+    top: 50%;
+    left: 1%;
+}
+
+#myLife li::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background-color: silver;
+}
+
+#myLife li::before{
+    color: silver;
+    position: absolute;
+    left: -15px;
+}
+
+#myLife li span{
+    position: absolute;
+    width: 180px;
+    left: -80px;
+}
+
+#myLife li:nth-child(2n)::after{
+    bottom: 0;
+}
+
+#myLife li:nth-child(2n)::before{
+    top:10px;
+}
+
+#myLife li:nth-child(2n+1)::before{
+    bottom:10px;
+}
+
+#myLife li:nth-child(2n) span{
+    bottom: 50PX;
+}
+
+#myLife li:nth-child(2n+1) span{
+    top: 50PX;
+}
+
+#myLife li{
+    position: absolute;
+}
+
+
+#myLife li:first-of-type{
+
+    left: 5%;
+}
+
+#myLife li:first-of-type::before{
+    content:"2012";
+}
+
+#myLife li:nth-of-type(2){
+    left: 15%;
+}
+
+#myLife li:nth-of-type(2)::before{
+    content:"2014";
+}
+
+#myLife li:nth-of-type(3){
+    left: 25%;
+}
+
+#myLife li:nth-of-type(3)::before{
+    content:"2014";
+}
+
+#myLife li:nth-of-type(4){
+    left: 45%;
+}
+
+#myLife li:nth-of-type(4)::before{
+    content:"2018";
+}
+
+#myLife li:nth-of-type(5){
+    left: 65%;
+}
+
+#myLife li:nth-of-type(5)::before{
+    content:"2021";
+}
+
+#myLife li:nth-of-type(6){
+    right:20%;
+}
+
+#myLife li:nth-of-type(6)::before{
+    content:"2022";
+}
+
+#myLife li:nth-of-type(7){
+    right:10%;
+}
+
+#myLife li:nth-of-type(7)::before{
+    content:"2022";
+}
+
+.fp-viewing-3 #myLife{
+    width: 98%;
+    transition: 2s;
+    text-align: center;
+}
+
+#myLife::before,
+#myLife::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    background: silver;
+
+    height: 1.5px;
+    width: 30px;
+}
+
+#myLife::before {
+    transform: rotate(45deg);
+
+    transform-origin: right bottom;
+}
+
+#myLife::after {
+    transform: rotate(-45deg);
+
+    transform-origin: right top;
 }

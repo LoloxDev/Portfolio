@@ -1,0 +1,19 @@
+section{
+    padding: 122px 50px;
+}
+
+section::after{
+    right: 50px;
+}
+
+section::before{
+    left: 50px;
+}
+
+.btn{
+    display: none;
+}
+
+header::after {
+    right: 85%;
+}

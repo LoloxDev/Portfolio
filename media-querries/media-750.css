@@ -1,0 +1,93 @@
+header{
+    height: unset;
+}
+
+.jauge{
+    display: none;
+}
+
+.j1{
+    display: block !important;
+    height: 100%;
+}
+
+.wavesbox{
+    bottom: 0;
+}
+
+section{
+    padding: 150px 0 0 0;
+}
+
+section:nth-of-type(1) ul li {
+    width: 100px;
+    height: 100px;
+    left:50% !important;
+    margin-left: -50px !important;
+}
+
+section:nth-of-type(1) ul li:first-of-type {
+    top:0;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(2) {
+    top:15%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(3) {
+    top:30%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(4) {
+    top:45%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(5) {
+    top:60%;
+}
+
+.active .waves {
+    height: 250px !important;
+    border-radius: unset;
+}
+
+.active li:first-of-type figure{
+    transition: all 0.3s linear 1s;
+}
+
+.active li:nth-of-type(2) figure {
+    transition: all 0.3s linear 1.4s;
+}
+
+
+.active li:nth-of-type(3) figure {
+    transition: all 0.3s linear 1.8s;
+}
+
+
+.active li:nth-of-type(4) figure {
+    transition: all 0.3s linear 2.1s;
+}
+
+
+.active li:nth-of-type(5) figure {
+    transition: all 0.3s linear 2.4s;
+}
+
+.active .r1{
+    transition: all 3s linear 0.5s;
+}
+
+#Jadoo img{
+    margin: 25px auto;
+}
+
+.active .waves{
+    bottom:0;
+    transition: all 1s linear 3.5s;
+}
+
+.active .j1 {
+    animation: unset;
+    opacity: 1;
+}

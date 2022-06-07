@@ -3,7 +3,7 @@ section::after,section::before,header::after{
 }
 
 section{
-    padding: 50px;
+    padding: 122px 0px;
 }
 
 nav{
@@ -17,4 +17,26 @@ nav ul{
 
 h1,h3{
     top: 19%;
+}
+
+.j4{
+    transform: rotate(-30deg);
+}
+
+.j2{
+    transform: rotate(30deg);
+}
+
+.j5{
+    right: 30%;
+    transform: rotate(-150deg);
+}
+
+.j3{
+    left: 30%;
+    transform: rotate(150deg);
+}
+
+.wavesbox{
+    bottom: 3%;
 }
