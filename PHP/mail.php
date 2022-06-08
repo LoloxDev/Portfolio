@@ -11,7 +11,7 @@
 $myMail = "loris.labarre@outlook.fr";
 
         if (isset($_POST)) {
-            $retour = mail($myMail,''$_POST['motif']', '$_POST['name']', '$_POST['msg']', '$_POST['email']', '$_POST['tel']');
+            $retour = mail($myMail,$_POST['motif'], $_POST['name'], $_POST['msg'], $_POST['email'], $_POST['tel']);
             if ($retour) {echo '<p>Votre message a bien été envoyé.</p>';
             } else {
                 echo '<p>Problème quelque part</p>';
