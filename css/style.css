@@ -251,7 +251,7 @@ header span {
 .arrow3::after,
 .arrow3::before {
     height: 3px;
-    width: 26px;
+    width: 15px;
 }
 
 .arrow4 {
@@ -369,6 +369,7 @@ section {
     height: 100vh;
     color: silver;
     padding: 122px 160px;
+    text-align: center;
 }
 
 section::after {
@@ -730,7 +731,8 @@ section:nth-of-type(1) figure img {
 }
 
 .j1 {
-    left: 49.9%;
+    left: 50%;
+    margin-left: -3px;
     top: 0;
     height: 400px;
     opacity: 0;
@@ -1614,3 +1616,25 @@ top: 20%;
     color:white;
 }
 
+.fp-viewing-section4 nav li:nth-of-type(5){
+    
+    height: 61px;
+    position: absolute;
+    right: -60px;
+    top: -45px;
+    height: 80px;
+}
+
+.fp-viewing-section4 nav{
+    
+right: 22%;
+}
+
+.fp-viewing-section4 .cup{
+    
+    right: -150px;
+    }
+
+.a2{
+    text-align: initial;
+}
