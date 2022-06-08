@@ -1,0 +1,103 @@
+.fp-viewing-3 #myLife{
+    transform: rotate(90deg);
+    width : 700px;
+    margin-left: -350px;
+    left:50%;
+}
+
+section, .a2{
+    padding: 0;
+}
+
+header{
+    display: none;
+}
+
+.a3 h3{
+    top: 5%;
+}
+
+#myLife li span{
+    top: 0 !important;
+    bottom:0;
+    background-color: #21282d;
+}
+
+#myLife ::before{
+    display: none; 
+}
+
+#myLife ::after{
+    display: none; 
+}
+
+#myLife li:nth-of-type(4) {
+    left: 40%;
+}
+
+#myLife li:nth-of-type(5) {
+    left: 50%;
+}
+
+#myLife li:nth-of-type(6) {
+    right: 35%;
+}
+
+#myLife li:nth-of-type(7) {
+    right: 20%;
+}
+
+section:nth-of-type(1) ul li:first-of-type {
+    top:8%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(2) {
+    top:23%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(3) {
+    top:38%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(4) {
+    top:53%;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(5) {
+    top:68%;
+}
+
+.active li:first-of-type figure{
+    transition: all 0.3s linear 0.8s;
+}
+
+.active li:nth-of-type(2) figure {
+    transition: all 0.3s linear 1.2s;
+}
+
+
+.active li:nth-of-type(3) figure {
+    transition: all 0.3s linear 1.6s;
+}
+
+
+.active li:nth-of-type(4) figure {
+    transition: all 0.3s linear 2s;
+}
+
+
+.active li:nth-of-type(5) figure {
+    transition: all 0.3s linear 2.4s;
+}
+
+.gridContain{
+    top:12%;
+}
+
+.gridContain2{
+    bottom:12%;
+}
+
+.login-popup {
+    top:-50px;
+}

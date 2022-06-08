@@ -2,9 +2,18 @@ section::after,section::before,header::after{
     display: none;
 }
 
-section{
-    padding: 122px 0px;
+.a2::after, .a2::before{
+    display: block;
 }
+
+section{
+    padding: 150px 0 0 0;
+}
+
+.a2{
+    padding: 122px 50px;
+}
+
 
 nav{
     width: 100%;
@@ -39,4 +48,30 @@ h1,h3{
 
 .wavesbox{
     bottom: 3%;
+}
+
+.ocean{
+    border-radius: unset;
+    bottom: 0;
+}
+
+.gridContain{
+
+    left: 8%;
+    top: 40%;
+}
+
+.gridContain2{
+
+    right: 8%;
+    top: 40%
+}
+
+.login-popup {
+    top:-120px;
+}
+
+h1,
+h3 {
+    top: 30%;
 }

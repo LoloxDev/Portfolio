@@ -2,6 +2,13 @@ header{
     height: unset;
 }
 
+.a2::after, .a2::before{
+    display: none;
+}
+.a2{
+    padding: 150px 0 0 0;
+}
+
 .jauge{
     display: none;
 }
@@ -13,10 +20,6 @@ header{
 
 .wavesbox{
     bottom: 0;
-}
-
-section{
-    padding: 150px 0 0 0;
 }
 
 section:nth-of-type(1) ul li {
@@ -90,4 +93,49 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
 .active .j1 {
     animation: unset;
     opacity: 1;
+}
+
+.fp-viewing-3 #myLife{
+    transform: rotate(90deg);
+    width : 700px;
+    margin-left: -350px;
+    left:50%;
+}
+
+.a3 h3{
+    top: 0;
+}
+
+#myLife li span{
+    transform: rotate(-90deg);
+    left: -90px;
+}
+
+#myLife li:nth-child(2n+1) span{
+    top:150px;
+}
+
+#myLife li:nth-child(2n) span{
+    bottom:150px;
+}
+
+#myLife ::before{
+    transform: rotate(-90deg);
+    
+}
+
+.gridContain{
+
+    left: 50%;
+    margin-left: -150px;
+    top: 25%;
+    bottom: unset;
+}
+
+.gridContain2{
+
+    right: 50%;
+    margin-right: -150px;
+    bottom: 10%;
+    top:unset;
 }

@@ -259,7 +259,7 @@ header span {
     transform: rotate(180deg);
     height: 3px;
     left: 23%;
-    top: -39px;
+    top: -37px;
     width: 44px;
     transform-origin: right bottom;
     display: none;
@@ -395,11 +395,15 @@ section::before {
 
 h1,
 h3 {
-    margin: auto !important;
+    margin: 0 auto !important;
     width: fit-content;
     position: relative;
     top: 40%;
     z-index: -1;
+}
+
+.a3 h3{
+    top:20%
 }
 
 h1 {
@@ -1035,9 +1039,9 @@ section:nth-of-type(1) figure img {
 /* aquarium */
 
 #octocat {
-    height: 300px;
-    width: 200px;
-    background: url(https://codinhood.com/static/9a146dac647e7129fa173acc0b0d437f/299c1/octocat.png)
+    height: 150px;
+    width: 100px;
+    background: url("../img/octocat.png")
         left center;
     animation: animateSprite 15s steps(1) infinite,
         swim 15s ease-in-out infinite;
@@ -1050,32 +1054,32 @@ section:nth-of-type(1) figure img {
 
 @keyframes animateSprite {
     0% {
-        background-position: -600px; /* Starting position moving left sprite */
+        background-position: -300px; /* Starting position moving left sprite */
     }
     20% {
         background-position: 0px; /* Straight on sprite */
     }
     25% {
-        background-position: -200px; /* Moving up sprite */
+        background-position: -100px; /* Moving up sprite */
     }
     35% {
-        background-position: -400px; /* Moving right sprite */
+        background-position: -200px; /* Moving right sprite */
     }
     40% {
-        background-position: -400px;
+        background-position: -200px;
     }
     50% {
-        background-position: -200px; /* Moving up sprite */
+        background-position: -100px; /* Moving up sprite */
     }
     60% {
         background-position: -0px; /* Straight on sprite */
     }
     67% {
-        background-position: -600px; /* Moving up sprite */
+        background-position: -300px; /* Moving up sprite */
     }
 
     100% {
-        background-position: -600px;
+        background-position: -300px;
     }
 }
 
@@ -1130,6 +1134,7 @@ section:nth-of-type(1) figure img {
     /* top: -2px; */
     background-image: linear-gradient(0deg, #182848, #2980b9);
     border-radius: 10%;
+    overflow: hidden;
 }
 
 .bubble {
@@ -1274,7 +1279,8 @@ section:nth-of-type(1) figure img {
 .login-popup {
     text-align: center;
     z-index: 9999;
-    height: 100%;
+    position: relative;
+    top: -100px;
 }
 /* Masquez la forme Popup */
 .form-popup {
@@ -1287,7 +1293,6 @@ section:nth-of-type(1) figure img {
     padding: 20px;
     background-color: #273038;
     height: 100%;
-    margin-top: -50px;
     border-top: solid 1px silver;
 }
 /* Largeur complète pour les champs de saisie */
@@ -1320,6 +1325,15 @@ section:nth-of-type(1) figure img {
 .form-container .btnForm:hover,
 .open-button:hover {
     opacity: 1;
+}
+
+label[for="valid"]{
+    font-size: 0.7em;
+    margin: 0 !important;
+}
+
+#valid{
+    margin: 0 !important;
 }
 
 .open-btn {
@@ -1465,6 +1479,7 @@ top: 20%;
     position: relative;
     top: 50%;
     left: 1%;
+    transition: 2s;
 }
 
 #myLife li::after{
@@ -1571,7 +1586,6 @@ top: 20%;
 
 .fp-viewing-3 #myLife{
     width: 98%;
-    transition: 2s;
     text-align: center;
 }
 
@@ -1602,3 +1616,4 @@ top: 20%;
 
     transform-origin: right top;
 }
+

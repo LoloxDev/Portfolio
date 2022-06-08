@@ -1,5 +1,5 @@
 h1{
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 h1, h3{
@@ -16,4 +16,12 @@ h1, h3{
 .open-btn:hover .portrait {
     bottom:350px !important;
     transform: scale(1.2);
+}
+
+#myLife li:nth-child(2n+1) span{
+    top:110px;
+}
+
+#myLife li:nth-child(2n) span{
+    bottom:110px;
 }
