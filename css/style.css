@@ -857,21 +857,9 @@ section:nth-of-type(1) figure img {
 /* Présentation */
 
 .myHistory {
-    position: initial;
+    position: relative;
     margin: 100px auto !important;
-}
-
-.myHistory::after {
-    width: 5%;
-    top: 24%;
-    right: 549px;
-    left: unset;
-}
-
-.myHistory::before {
-    width: 5%;
-    top: 24%;
-    left: 549px;
+    top: 0;
 }
 
 .myHistory + p {
@@ -1615,5 +1603,14 @@ top: 20%;
     transform: rotate(-45deg);
 
     transform-origin: right top;
+}
+
+#footer{
+    margin:auto auto 0 auto;
+    text-align: center;
+}
+
+.mentions, .am{
+    color:white;
 }
 
