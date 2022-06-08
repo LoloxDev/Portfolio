@@ -7,11 +7,16 @@
 
 <body>
 <?php
-    if (isset($_POST['message'])) {
-        $retour = mail('loris_labarre@outlook.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-    }
+
+$myMail = "loris.labarre@outlook.fr";
+
+        if (isset($_POST)) {
+            $retour = mail($myMail,''$_POST['motif']', '$_POST['name']', '$_POST['msg']', '$_POST['email']', '$_POST['tel']');
+            if ($retour) {echo '<p>Votre message a bien été envoyé.</p>';
+            } else {
+                echo '<p>Problème quelque part</p>';
+            }
+        }
     ?>
 </body>
 </html>
