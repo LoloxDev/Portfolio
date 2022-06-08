@@ -1,5 +1,10 @@
 // Run FULLSCREEN
-new fullpage("#fullpage", {});
+new fullpage("#fullpage", {
+    autoScrolling: true,
+    navigation: true,
+    anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
+    fixedElements:'.nav',
+});
 
 function openForm() {
     document.getElementById("popupForm").style.display = "block";

@@ -838,19 +838,19 @@ section:nth-of-type(1) figure img {
     transition: all 0.3s linear 2.5s;
 }
 
-.fp-viewing-2 header nav ul li:nth-of-type(1) a {
+.fp-viewing-section2 header nav ul li:nth-of-type(1) a {
     color: rgb(39, 163, 194);
 }
 
-.fp-viewing-3 header nav ul li:nth-of-type(2) a {
+.fp-viewing-section3 header nav ul li:nth-of-type(2) a {
     color: rgb(39, 163, 194);
 }
 
-.fp-viewing-4 header nav ul li:nth-of-type(3) a {
+.fp-viewing-section4 header nav ul li:nth-of-type(3) a {
     color: rgb(39, 163, 194);
 }
 
-.fp-viewing-5 header nav ul li:nth-of-type(4) a {
+.fp-viewing-section5 header nav ul li:nth-of-type(4) a {
     color: rgb(39, 163, 194);
 }
 
@@ -1269,7 +1269,7 @@ section:nth-of-type(1) figure img {
     opacity: 0.3;
 }
 
-.fp-viewing-4 nav {
+.fp-viewing-section4 nav {
     top: 40%;
     line-height: unset;
 }
@@ -1584,7 +1584,7 @@ top: 20%;
     content:"2022";
 }
 
-.fp-viewing-3 #myLife{
+.active #myLife{
     width: 98%;
     text-align: center;
 }
