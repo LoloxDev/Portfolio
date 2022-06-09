@@ -6,6 +6,7 @@ new fullpage("#fullpage", {
     fixedElements:'.nav',
     navigationTooltips: ['Acceuil','Projets','Parcours','Compétences','Présentation'],
     showActiveTooltip: true,
+    navigationPosition:true,
 });
 
 function openForm() {
