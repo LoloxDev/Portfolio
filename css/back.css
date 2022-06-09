@@ -1,0 +1,46 @@
+*{
+    font-family: 'Montserrat';
+}
+
+header h1{
+    margin: auto;
+    padding: 50px;
+    width: fit-content;
+}
+
+header{
+    background-color: beige;
+}
+
+nav{
+    background: beige;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    text-align: center;
+    line-height: 200px;
+}
+
+nav a {
+    color: black;
+    border: solid 1px black;
+    width: 90%;
+    font-size: 1.2em;
+    display: block;
+    margin: 30px auto;
+    transition: 0.2s;
+}
+
+nav a:hover{
+    background: black;
+    color:beige;
+    border:solid 1px beige;
+    width: 100%;
+}
+
+#logo{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 50px;
+}

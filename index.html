@@ -11,7 +11,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-        <script type="text/javascript" src="less.js"></script>
         <link
             rel="stylesheet"
             media="screen and (max-width: 1400px)"
@@ -65,9 +64,11 @@
             <canvas id="projector"
                 >Your browser does not support the Canvas element.</canvas
             >
+            
 
             <div class="section a1">
-                <header class="nav">
+                <a href="php/index.php" id="back"></a>
+                <header class="nav" id="nav">
                     <a href="#section1" class="btn">
                         <div class="arrow arrow1">
                             <div class="arrow arrow2"></div>
@@ -148,104 +149,109 @@
 
                     <div class="login-popup">
                         <div class="form-popup" id="popupForm">
-                            <form
-                                action="php/mail.php"
-                                class="form-container"
-                                method="post"
-                            >
-                                <h2>Une idée ? Un projet ? Parlons-en !</h2>
-
-                                <label for="name">
-                                    <strong>Nom / Prenom</strong>
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Nom/Prenom"
-                                    name="name"
-                                    required
-                                />
-
-                                <label for="email">
-                                    <strong>E-mail</strong>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Votre Email"
-                                    name="email"
-                                    required
-                                />
-
-                                <label for="tel">
-                                    <strong>Téléphone</strong>
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="tel"
-                                    placeholder="Votre numéro de téléphone"
-                                    name="tel"
-                                />
-
-                                <div class="motif">
-                                    <label for="motif"></label>
-                                    <select
-                                        placeholder="Objet"
-                                        name="motif"
-                                        id="objet"
-                                        required
-                                    >
-                                        <option disabled hidden selected>
-                                            Objet
-                                        </option>
-                                        <option>
-                                            Je veux démarrer un projet
-                                        </option>
-                                        <option>
-                                            Je veux poser une question
-                                        </option>
-                                        <option>Je veux un devis</option>
-                                        <option>Autre</option>
-                                    </select>
-                                </div>
-
-                                <label for="message">
-                                    <strong>Message</strong>
-                                </label>
-                                <textarea
-                                    rows="3"
-                                    id="msg"
-                                    placeholder="Votre Message"
-                                    name="msg"
-                                ></textarea>
-
-                                <input
-                                    type="checkbox"
-                                    id="valid"
-                                    name="valid"
-                                    checked
-                                    required
-                                />
-
-                                <label for="valid">
-                                    En soumettant ce formulaire, j'accepte que
-                                    les informations saisies soient exploitées
-                                    dans le cadre de la demande de contact et de
-                                    la relation commerciale qui peut en
-                                    découler.
-                                </label>
-
-                                <button type="submit" class="btnForm">
-                                    Envoyer
-                                </button>
-                                <button
-                                    type="button"
-                                    class="btnForm cancel"
-                                    onclick="closeForm()"
+                            
+                                <form
+                                    action="php/mail.php"
+                                    class="form-container"
+                                    method="post"
                                 >
-                                    Fermer
-                                </button>
-                            </form>
+                                    <div class="flexform">
+                                        <h2>Une idée ? Un projet ? Parlons-en !</h2>
+
+                                        <button
+                                        type="button"
+                                        class="btnForm cancel"
+                                        onclick="closeForm()"
+                                        >
+                                            X
+                                        </button>
+                                    </div>
+
+                                    <label for="name">
+                                        <strong>Nom / Prenom</strong>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Nom/Prenom"
+                                        name="name"
+                                        required
+                                    />
+
+                                    <label for="email">
+                                        <strong>E-mail</strong>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Votre Email"
+                                        name="email"
+                                        required
+                                    />
+
+                                    <label for="tel">
+                                        <strong>Téléphone</strong>
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="tel"
+                                        placeholder="Votre numéro de téléphone"
+                                        name="tel"
+                                    />
+
+                                    <div class="motif">
+                                        <label for="motif"></label>
+                                        <select
+                                            placeholder="Objet"
+                                            name="motif"
+                                            id="objet"
+                                            required
+                                        >
+                                            <option disabled hidden selected>
+                                                Objet
+                                            </option>
+                                            <option>
+                                                Je veux démarrer un projet
+                                            </option>
+                                            <option>
+                                                Je veux poser une question
+                                            </option>
+                                            <option>Je veux un devis</option>
+                                            <option>Autre</option>
+                                        </select>
+                                    </div>
+
+                                    <label for="message">
+                                        <strong>Message</strong>
+                                    </label>
+                                    <textarea
+                                        rows="3"
+                                        id="msg"
+                                        placeholder="Votre Message"
+                                        name="msg"
+                                    ></textarea>
+
+                                    <input
+                                        type="checkbox"
+                                        id="valid"
+                                        name="valid"
+                                        checked
+                                        required
+                                    />
+
+                                    <label for="valid">
+                                        En soumettant ce formulaire, j'accepte que
+                                        les informations saisies soient exploitées
+                                        dans le cadre de la demande de contact et de
+                                        la relation commerciale qui peut en
+                                        découler.
+                                    </label>
+
+                                    <button type="submit" class="btnForm">
+                                        Envoyer
+                                    </button>
+
+                                </form>
                         </div>
                     </div>
 

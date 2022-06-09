@@ -1,3 +1,7 @@
 Responsive
 finir les autres pages
 fleche parcours de vie format tel : décaler la fleche a droite et écrire a gauche
+
+Pour back office, utiliser la tasse :
+
+rotation sur la droite et ouvrir un menu qui s'ouvre doucement avec le liquide qui coule du genre border right et border bottom

@@ -277,7 +277,6 @@ header {
     width: 100%;
     position: fixed;
     top: 20px;
-    left: 0;
 }
 
 nav ul {
@@ -768,6 +767,14 @@ section:nth-of-type(1) figure img {
     transition: all 0.3s linear 1.8s;
 }
 
+#back{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+}
+
 .active li:first-of-type figure,
 .active li:nth-of-type(5) figure {
     transition: all 0.3s linear 2.2s;
@@ -1246,7 +1253,19 @@ section:nth-of-type(1) figure img {
     background-color: #273038;
     height: 100%;
     border-top: solid 1px silver;
+    width: 100%;
 }
+
+.flexform h2{
+    margin:0 auto 20px auto;
+}
+
+.flexform{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* Largeur complète pour les champs de saisie */
 .form-container input,
 .form-container select,
@@ -1272,6 +1291,9 @@ section:nth-of-type(1) figure img {
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
     background-color: #cc0000;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
 }
 /* Planez les effets pour les boutons */
 .form-container .btnForm:hover,
