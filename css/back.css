@@ -5,13 +5,13 @@
 header h1{
     margin: auto;
     padding: 30px;
-    width: fit-content; 
 }
 
 header{
     background-color: beige;
     right: 0;
     width: 100%;
+    text-align: center;
 }
 
 section{
@@ -58,4 +58,9 @@ nav a:hover{
 
 tbody td:first-of-type{
     width: 50px;
+}
+
+#add-img{
+    width: 100px;
+    height: 100px;
 }
