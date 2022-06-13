@@ -1,5 +1,4 @@
 <?php
-    include 'index.php';
     include_once dirname(__FILE__) . './../fonctions/connexion_sgbd.php';
     $sgbd= connexion_sgbd();
 ?>
@@ -20,7 +19,7 @@ array_key_exists('email', $_SESSION) && $_SESSION['id_admin'] != 4
 <?php
 
 $_GET['ind'] = 'projets';
-    $editOrAdd="../../../exec/add_produits.php";
+    $editOrAdd="../exec/add_produits.php";
 if (!empty($_GET['id_edit'])){
     $editOrAdd="edit_produits.php?id_edit=".$_GET['id_edit'];
 }
@@ -32,16 +31,15 @@ $editInfo = array(
     'nom' => "",
     'obj' => "",
     'statut' => "",
-    'langage' => ""
 );
 
 if (!empty($_GET['id_edit'])) {
 
     // on fait la requete pour modifier les éléments
 
-    $requeteEdit = $sgbd->prepare('SELECT projets.nom, projets.objectif, projets.statut, projets.id_langages, images.src, images.alt
-    FROM projets INNER JOIN portfolio.images ON projets.id_img = images.id_img WHERE produits.id_produit=:id_produit');
-    $requeteEdit->execute([":id_produit"=>$_GET["id_edit"]]);
+    $requeteEdit = $sgbd->prepare('SELECT projets.nom, projets.objectif, projets.statut, images.src, images.alt
+    FROM projets INNER JOIN portfolio.images ON projets.id_img = images.id_img WHERE projets.id_projet=:id_projet');
+    $requeteEdit->execute([":id_projet"=>$_GET["id_edit"]]);
     $resultat_requeteEdit = $requeteEdit->fetch((PDO::FETCH_ASSOC));
 
     $editInfo = array(
@@ -49,7 +47,6 @@ if (!empty($_GET['id_edit'])) {
         'nom' => $resultat_requeteEdit['nom'],
         'obj' => $resultat_requeteEdit['objectif'],
         'statut' => $resultat_requeteEdit['statut'],
-        'langage' => $resultat_requeteEdit['id_langages'],
 
     );
 
@@ -58,7 +55,7 @@ if (!empty($_GET['id_edit'])) {
                 // ici on echo le formulaire, on utilise editOrAdd sur l'affiction, elle nous enverra sur la bonne page de réception des données.
 echo' 
 
-    <form class="row text-center " action="./src/exec/'.($editOrAdd).'" method="post" enctype="multipart/form-data" >
+    <form class="row text-center " action="'.($editOrAdd).'" method="post" enctype="multipart/form-data" >
 
             <div class="col-md-12 text-center form-group">
                 <input  type="file" id="file" name="file"  accept="image/png, image/jpeg, image/webp"/>';
@@ -89,12 +86,12 @@ echo'
                         <option value="3">En cours de développement</option>
                         <option value="2">Online</option>';
 
-            } elseif(!empty($resultat_requeteEdit['cat'] == 'En cours de développement')){
+            } elseif(!empty($resultat_requeteEdit['statut'] == 'En cours de développement')){
 
                 echo   '<option value="1">Offline</option>
                         <option value="3"selected>En cours de développement</option>
                         <option value="2">Online</option>';
-            } elseif(!empty($resultat_requeteEdit['cat'] == 'Online')){
+            } elseif(!empty($resultat_requeteEdit['statut'] == 'Online')){
 
                 echo   '<option value="1">Offline</option>
                         <option value="3">En cours de développement</option>
@@ -109,16 +106,36 @@ echo'
             
             echo '</select>
 
-            </div>
+            </div>';
 
-            <div class="col-md-12 text-center form-group">
-                   <label for="lieu">Langages</label>
-                   <input class="form-control" type="text" name="langages" text_area="Langages" placeholder="HTML" value="'.($editInfo['langage']).'"> 
+            // Idem pour les langages
+
+            echo '<div class="col-md-12 form-group">
+
+            <label for="categorie">Choisisez un un ou plusieurs langages:</label>
+            <select multiple="oui" class="form-control" name="langages" id="cat-select">';
+
+                 echo
+                        '<option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                        <option value="4">MySQL</option>
+                        <option value="5">PHP</option>
+                        <option value="6">Bootstrap</option>
+                        <option value="7">Photoshop</option>
+                        <option value="8">Adobe Illustrator</option>
+                        <option value="9">Gravit Designer</option>
+                        <option value="10">Wordpress</option>
+                        <option value="11">Sass</option>
+                        <option value="12">Adobe XDesign</option>';
+            
+            echo '</select>
+
             </div>
 
             <div class="col-md-12 text-center form-group">
                     <label for="description">Objectif :</label>            
-                    <textarea name="story" height=500px class="form-control textarea" readonly>'.($editInfo['obj']).'</textarea>
+                    <textarea name="story" height=500px class="form-control textarea">'.($editInfo['obj']).'</textarea>
                 </figure>
             </div>
 
@@ -172,11 +189,13 @@ echo'
                             
                             $resultat_requeteLang = $requeteLang->fetchAll((PDO::FETCH_ASSOC));
 
+
+                            // On reset la variable a chaque boucle 
                             $listeLang="";
 
                             foreach ($resultat_requeteLang as $allLang) {
 
-                                $listeLang.=$allLang['nom'].",";
+                                $listeLang.=$allLang['nom']." ";
                                 //$listeLang=$listeLang.$allLang['nom'].",";
                             }
 
@@ -198,7 +217,7 @@ echo'
                                         echo '
                                         </td>
                                         <td class="col-md-1 edit">
-                                            <a class="tablebutton" href="index.php?ind=desc&id_edit='.($articleAdmin['pID']).'">
+                                            <a class="tablebutton" href="index.php?ind=projets&id_edit='.($articleAdmin['pID']).'">
                                                 <img src="../img/icons8-modifier.svg" class="testcolor">
                                             </a>
                                         </td>

@@ -1,5 +1,4 @@
 <?php
-    include 'index.php';
     include_once dirname(__FILE__) . './../fonctions/connexion_sgbd.php';
     $sgbd= connexion_sgbd();
 ?>

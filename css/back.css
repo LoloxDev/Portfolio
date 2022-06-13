@@ -64,3 +64,28 @@ tbody td:first-of-type{
     width: 100px;
     height: 100px;
 }
+
+.tablebutton img{
+    height: 50px;
+    width: 50px;
+    transition: 00.2s;
+}
+
+.tablebutton img:hover{
+    transform: scale(1.2);
+}
+
+form{
+    margin: auto !important;
+    width: 50%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#add-img {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}

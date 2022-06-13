@@ -18,36 +18,22 @@ function validation_donnees($donnees){
     $donnees = htmlspecialchars($donnees);
     return $donnees;
 }
-
+$id_img=$sgbd->lastInsertID();
 $nom = validation_donnees($_POST["nom"]);
 $statut = validation_donnees($_POST["statut"]);
+$message = validation_donnees($_POST["story"]);
 $langages = validation_donnees($_POST["langages"]);
-$message = validation_donnees($_POST["story"]);
 
-    $sth = $sgbd->prepare("
-    INSERT INTO produits (nom, statut, id_langage, story)
-    VALUES (:nom, :statut, :id_langage, :story)");
-/*$sth->bindParam(':nom',$nom, PDO::PARAM_STR);
-$sth->bindParam(':id_cat',$cat, PDO::PARAM_INT);
-$sth->bindParam(':lieu',$lieu, PDO::PARAM_STR);
-$sth->bindParam(':description',$message, PDO::PARAM_STR);
-$sth->bindParam(':id_user',$_SESSION["id_user"]);*/
-$sth->execute([
-    ':nom' => $nom,
-    ':statut' => $statut,
-    ':id_langage' => $id_lang,
-    ':story' => $message,
-]);
-$id_produit=$sgbd->lastInsertID();
-header('location:../php/index.php?ind=projets');
 
-$message = validation_donnees($_POST["story"]);
+
+
+
 
 if(!empty($_FILES) && array_key_exists('file', $_FILES) && !empty($_FILES['file']['name'])) {
     $name = validation_donnees($_FILES['file']['name']);
     $nomphoto= validation_donnees("Une photo de ".$nom.".");
     $sth = $sgbd->prepare("
-    INSERT INTO photos (id_produit, src, alt, titre)
+    INSERT INTO images (id_img, src, alt, titre)
     VALUES (:id, :src, :alt, :titre)");
     /*$sth->bindParam(':id',($id_produit), PDO::PARAM_INT);
     $sth->bindParam(':src',($name), PDO::PARAM_STR);
@@ -67,6 +53,34 @@ if(!empty($_FILES) && array_key_exists('file', $_FILES) && !empty($_FILES['file'
 } else {
 echo "Vous devez envoyer un fichier.";
 }
+
+$id_img2=$sgbd->lastInsertID();
+$sth = $sgbd->prepare("
+INSERT INTO projets (nom, statut, objectif, id_img)
+VALUES (:nom, :statut, :story, :id_img)");
+/*$sth->bindParam(':nom',$nom, PDO::PARAM_STR);
+$sth->bindParam(':id_cat',$cat, PDO::PARAM_INT);
+$sth->bindParam(':lieu',$lieu, PDO::PARAM_STR);
+$sth->bindParam(':description',$message, PDO::PARAM_STR);
+$sth->bindParam(':id_user',$_SESSION["id_user"]);*/
+$sth->execute([
+':nom' => $nom,
+':statut' => $statut,
+':story' => $message,
+':id_img' => $id_img2,
+]);
+
+
+$sth = $sgbd->prepare("
+INSERT INTO langages_projets (id_langage)
+VALUES (:langages)");
+$sth->execute([
+    ':langages' => $langages,
+]);
+
+
+header('location:../php/index.php?ind=projets');
+
 
 //} else { echo 'Acces interdit';} ?>
 

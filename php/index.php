@@ -27,6 +27,29 @@
         <h1> Bienvenue sur mon Back office </h1>
     </header>
 
+
+    
+<?php
+
+
+
+if(!isset($_GET['ind'])) {
+    $_GET['ind'] = 'projets' ; 
+}
+if($_GET['ind'] =='projets') {
+    include 'projets.php';
+}
+elseif ($_GET['ind'] == 'langages') {
+    include 'langages.php';
+}
+elseif ($_GET['ind'] == 'user') {
+    include 'utilisateurs.php';
+}
+
+
+?>
+
+
     <nav>
         <ul>
 
@@ -37,19 +60,19 @@
             </li>
 
             <li>
-                <a href="projets.php">
+                <a href="index.php?ind=projets">
                     Projets
                 </a>
             </li>
 
             <li>
-                <a href="langages.php">
+                <a href="index.php?ind=langages">
                     Langages
                 </a>
             </li>
 
             <li>
-                <a href="utilisateurs.php">
+                <a href="index.php?ind=user">
                     Utilisateurs
                 </a>
             </li>
