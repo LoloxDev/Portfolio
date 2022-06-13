@@ -150,9 +150,8 @@ echo'
 
                 <?php // Ici la requête pour le tableau
 
-                        $requeteAdmin = $sgbd->query ('SELECT images.src, images.alt, projets.nom as pNom, projets.id_projet , projets.objectif, projets.statut, langages.nom as lNom
-                        FROM projets INNER JOIN portfolio.images ON projets.id_img = images.id_img
-                        INNER JOIN portfolio.langages ON projets.id_langage = langages.id_langage');
+                        $requeteAdmin = $sgbd->query ('SELECT images.src, images.alt, projets.nom as pNom, projets.id_projet as pID, projets.id_img, projets.objectif, projets.statut
+                        FROM projets INNER JOIN portfolio.images ON projets.id_img = images.id_img');
 
                         $requeteAdmin->execute();
 
@@ -160,8 +159,26 @@ echo'
 
                         // On affiche le tableau 
 
+                        
+
+
                         foreach ($resultat_requeteAdmin as $articleAdmin) {
 
+                            $requeteLang = $sgbd->prepare ('SELECT langages.nom FROM langages INNER JOIN langages_projets ON langages.id_langage = langages_projets.id_langage WHERE id_projet = :id_projet');
+                            $requeteLang->bindParam(':id_projet', $articleAdmin['pID']);
+
+                            $requeteLang->execute();
+                            
+                            
+                            $resultat_requeteLang = $requeteLang->fetchAll((PDO::FETCH_ASSOC));
+
+                            $listeLang="";
+
+                            foreach ($resultat_requeteLang as $allLang) {
+
+                                $listeLang.=$allLang['nom'].",";
+                                //$listeLang=$listeLang.$allLang['nom'].",";
+                            }
 
                             echo   '<tr>
                                         <td>';
@@ -171,14 +188,22 @@ echo'
                                         <td>'.($articleAdmin['pNom']).'</td>
                                         <td>'.($articleAdmin['objectif']).'</td>
                                         <td>'.($articleAdmin['statut']).'</td>
-                                        <td>'.($articleAdmin['lNom']).'</td>
+                                        <td>';
+
+                                        echo $listeLang;
+
+
+
+
+                                        echo '
+                                        </td>
                                         <td class="col-md-1 edit">
-                                            <a class="tablebutton" href="index.php?ind=desc&id_edit='.($articleAdmin['id_projet']).'">
+                                            <a class="tablebutton" href="index.php?ind=desc&id_edit='.($articleAdmin['pID']).'">
                                                 <img src="../img/icons8-modifier.svg" class="testcolor">
                                             </a>
                                         </td>
                                         <td class="col-md-1 delete">
-                                            <a class="tablebutton" onclick="window.open(\'./src/exec/delete_produits.php?id_delete='.($articleAdmin['id_projet']).'\',\'pop_up\',\'width=300, height=200, toolbar=no status=no\');">
+                                            <a class="tablebutton" onclick="window.open(\'./src/exec/delete_produits.php?id_delete='.($articleAdmin['pID']).'\',\'pop_up\',\'width=300, height=200, toolbar=no status=no\');">
                                                 <img src="../img/poubelle.svg" class="testcolor">
                                             </a>
                                         </td>
