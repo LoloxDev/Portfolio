@@ -47,20 +47,33 @@ elseif ($_GET['ind'] == 'user') {
 }
 
 
-                    // Supression d'un produit
+                    // Supression d'un projet
 
 
                     if(!empty($_GET['id_delete'])){
-                        include_once dirname(__FILE__) . '/../src/fonctions/connexion_sgbd.php';
-                        $sgbd=connexion_sgbd();
+                        include_once dirname(__FILE__) . './../fonctions/connexion_sgbd.php';
+                        $sgbd= connexion_sgbd();
 
-                            $delete = $sgbd->prepare(" DELETE FROM produits WHERE id_produit=:id_produit");
+                            $delete = $sgbd->prepare(" DELETE FROM projets WHERE id_projet=:id_produit");
                             $delete->execute(array(':id_produit'=>$_GET['id_delete']));
                         
-                        
-                        header('location:index.php?ind=projets');
+                    
 
                     }
+
+                    // Supression d'un langage
+
+                    if(!empty($_GET['id_delete'])){
+                        include_once dirname(__FILE__) . './../fonctions/connexion_sgbd.php';
+                        $sgbd= connexion_sgbd();
+
+                            $delete = $sgbd->prepare(" DELETE FROM langages WHERE id_langage=:id_produit");
+                            $delete->execute(array(':id_produit'=>$_GET['id_delete']));
+                        
+                    
+
+                    }
+                    
                     
 
 

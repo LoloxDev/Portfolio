@@ -82,26 +82,26 @@ echo'
 
             if(!empty($resultat_requeteEdit['statut'] == 'Offline')) {
 
-                echo   '<option value="1" selected>Offline</option>
-                        <option value="3">En cours de développement</option>
-                        <option value="2">Online</option>';
+                echo   '<option value="Offline" selected>Offline</option>
+                        <option value="En cours de développement">En cours de développement</option>
+                        <option value="Online">Online</option>';
 
             } elseif(!empty($resultat_requeteEdit['statut'] == 'En cours de développement')){
 
-                echo   '<option value="1">Offline</option>
-                        <option value="3"selected>En cours de développement</option>
-                        <option value="2">Online</option>';
+                echo   '<option value="Offline">Offline</option>
+                        <option value="En cours de développement"selected>En cours de développement</option>
+                        <option value="Online">Online</option>';
             } elseif(!empty($resultat_requeteEdit['statut'] == 'Online')){
 
-                echo   '<option value="1">Offline</option>
-                        <option value="3">En cours de développement</option>
-                        <option value="2"selected>Online</option>';
+                echo   '<option value="Offline">Offline</option>
+                        <option value="En cours de développement">En cours de développement</option>
+                        <option value="Online"selected>Online</option>';
             } else {
 
                 echo
-                        '<option value="1">Offline</option>
-                        <option value="3">En cours de développement</option>
-                        <option value="2">Online</option>';
+                        '<option value="Offline">Offline</option>
+                        <option value="En cours de développement">En cours de développement</option>
+                        <option value="Online">Online</option>';
             }
             
             echo '</select>
@@ -287,7 +287,5 @@ document.getElementById('add-img').addEventListener('click', img_add);
 
 </script>
 
-
-<script src="../src/bbcode_editeur/bbcode.js"></script>
 
 <?php  // } else { echo 'Acces non autorisé';} ?>

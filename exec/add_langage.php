@@ -20,13 +20,7 @@ function validation_donnees($donnees){
 }
 $id_img=$sgbd->lastInsertID();
 $nom = validation_donnees($_POST["nom"]);
-$statut = validation_donnees($_POST["statut"]);
-$message = validation_donnees($_POST["story"]);
-//$langages = validation_donnees($_POST["langages"]);
-
-
-
-
+$type = validation_donnees($_POST["type"]);
 
 
 if(!empty($_FILES) && array_key_exists('file', $_FILES) && !empty($_FILES['file']['name'])) {
@@ -41,7 +35,7 @@ if(!empty($_FILES) && array_key_exists('file', $_FILES) && !empty($_FILES['file'
     $sth->bindParam(':titre',($nom), PDO::PARAM_STR);*/
     $sth->execute([
         ':id' => $id_img,
-        ':id_pro' => $id_img,
+        ':id_pro' => 0,
         ':src' => $name,
         ':alt' => $nomphoto,
         ':titre' => $nom,
@@ -57,8 +51,8 @@ echo "Vous devez envoyer un fichier.";
 
 $id_img2=$sgbd->lastInsertID();
 $sth = $sgbd->prepare("
-INSERT INTO projets (nom, statut, objectif, id_img)
-VALUES (:nom, :statut, :story, :id_img)");
+INSERT INTO langages (nom, type, id_img)
+VALUES (:nom, :type, :id_img)");
 /*$sth->bindParam(':nom',$nom, PDO::PARAM_STR);
 $sth->bindParam(':id_cat',$cat, PDO::PARAM_INT);
 $sth->bindParam(':lieu',$lieu, PDO::PARAM_STR);
@@ -66,15 +60,13 @@ $sth->bindParam(':description',$message, PDO::PARAM_STR);
 $sth->bindParam(':id_user',$_SESSION["id_user"]);*/
 $sth->execute([
 ':nom' => $nom,
-':statut' => $statut,
-':story' => $message,
+':type' => $type,
 ':id_img' => $id_img2,
 ]);
 
 
 
-header('location:../php/index.php?ind=projets');
-
+header('location:../php/index.php?ind=langages');
 
 //} else { echo 'Acces interdit';} ?>
 
