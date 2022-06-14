@@ -7,6 +7,8 @@
     <title>BackOff</title>
     <link rel="stylesheet" href="../css/back.css" />
     <link rel="stylesheet" href="../css/normalizer.css" />
+    <link rel="shortcut icon" href="img/bitmoji.png"/>
+    <link rel="apple-touch-icon" href="img/bitmoji.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">

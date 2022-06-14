@@ -96,7 +96,7 @@ echo'
     ?>
 
     <div>
-        <h1 class="text-center">Les projets</h1>
+        <h1 class="text-center">Les langages</h1>
         <table class="table table-dark">
 
             <thead>
