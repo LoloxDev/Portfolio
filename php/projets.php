@@ -21,7 +21,7 @@ array_key_exists('email', $_SESSION) && $_SESSION['id_admin'] != 4
 $_GET['ind'] = 'projets';
     $editOrAdd="../exec/add_produits.php";
 if (!empty($_GET['id_edit'])){
-    $editOrAdd="edit_produits.php?id_edit=".$_GET['id_edit'];
+    $editOrAdd="../exec/edit_produits.php?id_edit=".$_GET['id_edit'];
 }
 
 // On créer un tableau pour regrouper les données 
@@ -110,7 +110,7 @@ echo'
 
             // Idem pour les langages
 
-            echo '<div class="col-md-12 form-group">
+            /*echo '<div class="col-md-12 form-group">
 
             <label for="categorie">Choisisez un un ou plusieurs langages:</label>
             <select multiple="oui" class="form-control" name="langages" id="cat-select">';
@@ -131,9 +131,9 @@ echo'
             
             echo '</select>
 
-            </div>
+            </div>*/
 
-            <div class="col-md-12 text-center form-group">
+             echo '<div class="col-md-12 text-center form-group">
                     <label for="description">Objectif :</label>            
                     <textarea name="story" height=500px class="form-control textarea">'.($editInfo['obj']).'</textarea>
                 </figure>
@@ -222,7 +222,7 @@ echo'
                                             </a>
                                         </td>
                                         <td class="col-md-1 delete">
-                                            <a class="tablebutton" onclick="window.open(\'./src/exec/delete_produits.php?id_delete='.($articleAdmin['pID']).'\',\'pop_up\',\'width=300, height=200, toolbar=no status=no\');">
+                                            <a class="tablebutton" onclick="window.open(\'../exec/delete_produits.php?id_delete='.($articleAdmin['pID']).'\',\'pop_up\',\'width=300, height=200, toolbar=no status=no\');">
                                                 <img src="../img/poubelle.svg" class="testcolor">
                                             </a>
                                         </td>

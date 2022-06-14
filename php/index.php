@@ -47,6 +47,23 @@ elseif ($_GET['ind'] == 'user') {
 }
 
 
+                    // Supression d'un produit
+
+
+                    if(!empty($_GET['id_delete'])){
+                        include_once dirname(__FILE__) . '/../src/fonctions/connexion_sgbd.php';
+                        $sgbd=connexion_sgbd();
+
+                            $delete = $sgbd->prepare(" DELETE FROM produits WHERE id_produit=:id_produit");
+                            $delete->execute(array(':id_produit'=>$_GET['id_delete']));
+                        
+                        
+                        header('location:index.php?ind=projets');
+
+                    }
+                    
+
+
 ?>
 
 

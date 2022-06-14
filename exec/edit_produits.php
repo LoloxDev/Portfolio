@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-if (!empty($_SESSION) && array_key_exists('id_user', $_SESSION) && 
+/*if (!empty($_SESSION) && array_key_exists('id_user', $_SESSION) && 
 array_key_exists('id_admin', $_SESSION) && array_key_exists('nom', $_SESSION) && 
 array_key_exists('prenom', $_SESSION) && array_key_exists('login', $_SESSION) && 
 array_key_exists('email', $_SESSION) && $_SESSION['id_admin'] != 4 
-&& ($_SESSION['id_admin'] == 1 || $_SESSION['id_admin'] == 2)) {
+&& ($_SESSION['id_admin'] == 1 || $_SESSION['id_admin'] == 2)) {*/
 
-$sgbd= connexion_sgbd();
+    include_once dirname(__FILE__) . './../fonctions/connexion_sgbd.php';
+    $sgbd= connexion_sgbd();
 
 function validation_donnees($donnees){
     $donnees = trim($donnees);
@@ -17,25 +18,18 @@ function validation_donnees($donnees){
 }
 
 $nom = validation_donnees($_POST["nom"]);
-$cat = validation_donnees($_POST["cat"]);
-$lieu = validation_donnees($_POST["lieu"]);
+$statut = validation_donnees($_POST["statut"]);
 $message = validation_donnees($_POST["story"]);
+//$langages = validation_donnees($_POST["langages"]);
 
-$sth = $sgbd->prepare(" UPDATE produits SET produits.nom = :nom, produits.id_cat = :id_cat, produits.lieu = :lieu, 
-produits.description = :description WHERE produits.id_produit=:id_produit");
+$sth = $sgbd->prepare(" UPDATE projets SET projets.nom = :nom, projets.statut = :statut, projets.objectif = :msg 
+ WHERE projets.id_projet=:id_projet");
 
 $sth->bindParam(':nom',$nom);
-$sth->bindParam(':id_cat',$cat);
-$sth->bindParam(':lieu',$lieu);
-$sth->bindParam(':description',$message);
-$sth->bindParam(':id_produit',$_GET["id_edit"]);
-$sth->execute([
-    ':nom' => $nom,
-    ':id_cat' => $cat,
-    ':lieu' => $lieu,
-    ':description' => $message,
-    ':id_produit' => $_GET["id_edit"]
-]);
+$sth->bindParam(':statut',$statut);
+$sth->bindParam(':msg',$message);
+$sth->bindParam(':id_projet',$_GET["id_edit"]);
+$sth->execute();
 /* Pour les modifications, Rajouter un if else ( SI la page existe alors la modifier SINON la créer ) */
 /* Pour rajouter la photos, créer une autre requetes sql INSERT aec le $id_produit */
 
@@ -45,13 +39,13 @@ $sth->execute([
  if(!empty($_FILES) && array_key_exists('file', $_FILES) && !empty($_FILES['file']['name'])) {
         $name=$_FILES["file"]["name"];
         $nomphoto="Une photo de ".$nom.".";
-        $sth = $sgbd->prepare('UPDATE photos SET photos.src = :src, photos.alt = :alt, photos.titre = :titre WHERE photos.id_produit=:id_produit');
+        $sth = $sgbd->prepare('UPDATE images SET images.src = :src, images.alt = :alt, images.titre = :titre WHERE images.id_projet=:id_projet');
         /*$sth->bindParam(':id_produit',validation_donnees($_GET["id_edit"]));
         $sth->bindParam(':src',validation_donnees($name));
         $sth->bindParam(':alt',validation_donnees($nomphoto));
         $sth->bindParam(':titre',validation_donnees($nom));*/
         $sth->execute([
-            ':id_produit' => validation_donnees($_GET["id_edit"]),
+            ':id_projet' => validation_donnees($_GET["id_edit"]),
             ':src' => validation_donnees($name),
             ':alt' => validation_donnees($nomphoto),
             ':titre' => validation_donnees($nom)
@@ -61,9 +55,9 @@ $sth->execute([
         }
 }
 
+echo("test");
+//header('location:../php/index.php?ind=projets');
 
-header('location:../php/index.php?ind=projets');
-
-} else { echo 'Acces interdit';}
+//} else { echo 'Acces interdit';}
 
 ?>

@@ -22,7 +22,7 @@ $id_img=$sgbd->lastInsertID();
 $nom = validation_donnees($_POST["nom"]);
 $statut = validation_donnees($_POST["statut"]);
 $message = validation_donnees($_POST["story"]);
-$langages = validation_donnees($_POST["langages"]);
+//$langages = validation_donnees($_POST["langages"]);
 
 
 
@@ -71,15 +71,8 @@ $sth->execute([
 ]);
 
 
-$sth = $sgbd->prepare("
-INSERT INTO langages_projets (id_langage)
-VALUES (:langages)");
-$sth->execute([
-    ':langages' => $langages,
-]);
 
-
-header('location:../php/index.php?ind=projets');
+// header('location:../php/index.php?ind=projets');
 
 
 //} else { echo 'Acces interdit';} ?>
