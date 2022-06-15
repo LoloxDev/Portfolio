@@ -4,6 +4,8 @@ fleche parcours de vie format tel : décaler la fleche a droite et écrire a gau
 
 ajouter une page de connexion pour back office
 
-le moyen d'archier projet
+le moyen d'archiver projet
+
+ajouter une popup pour les projets et tout afficher en SQL
 
 sécuriser

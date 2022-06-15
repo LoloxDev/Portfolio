@@ -1675,3 +1675,14 @@ right: 22%;
     right: 0;
     animation: width 2s infinite;
 }
+
+#connect {
+    background-color: silver;
+    width: 50%;
+    height: 20%;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -285px;
+    position: absolute;
+}
