@@ -406,7 +406,7 @@ h3 {
     top:20%
 }
 
-h1 {
+section:first-of-type h1 {
     font-size: 5em;
 }
 
@@ -1685,11 +1685,11 @@ right: 22%;
 
 #connect {
     background-color: silver;
-    width: 50%;
+    width: 320px;
     left: 50%;
     top: 50%;
-    margin-top: -300px;
-    margin-left: -285px;
+    margin-top: -200px;
+    margin-left: -150px;
     position: absolute;
     display: none;
 }
