@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['username'] == "LoloxDev"){
+
+
  ?>
 
 <!DOCTYPE html>
@@ -23,3 +26,5 @@ session_start();
 
 </body>
 </html>
+
+<?php } else { echo'Acces refusé'; }?>

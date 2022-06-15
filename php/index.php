@@ -33,6 +33,10 @@
     
 <?php
 
+session_start();
+if($_SESSION['username'] == "LoloxDev"){
+
+
 
 
 if(!isset($_GET['ind'])) {
@@ -115,3 +119,5 @@ elseif ($_GET['ind'] == 'user') {
     
 </body>
 </html>
+
+<?php } else { echo'Acces refusé'; }?>

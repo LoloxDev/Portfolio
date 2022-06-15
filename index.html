@@ -71,9 +71,18 @@
             <div class="section a1">
                 <a onclick="openForm2()" id="back"></a>
                 <div id="connect">
-                    <form action="exec/verification.php" method="POST">
-                        <h1>Connexion</h1>
-                        
+                    <form action="exec/verifications.php" method="POST">
+
+                        <div class="flexform">
+                            <h1>Connexion</h1>
+                            <button
+                            type="button"
+                            class="btnForm cancel"
+                            onclick="closeForm2()"
+                            >
+                                X
+                            </button>
+                        </div>
                         <label><b>Nom d'utilisateur</b></label>
                         <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
         
@@ -81,13 +90,7 @@
                         <input type="password" placeholder="Entrer le mot de passe" name="password" required>
         
                         <input type="submit" id='submit' value='LOGIN' >
-                        <?php
-                        if(isset($_GET['erreur'])){
-                            $err = $_GET['erreur'];
-                            if($err==1 || $err==2)
-                                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                        }
-                        ?>
+                        
                     </form>
                 </div>
                 <header class="nav" id="nav">

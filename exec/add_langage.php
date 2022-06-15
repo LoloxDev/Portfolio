@@ -1,11 +1,7 @@
 <?php
-/* session_start();
+session_start();
+if($_SESSION['username'] == "LoloxDev"){
 
-if (!empty($_SESSION) && array_key_exists('id_user', $_SESSION) && 
-array_key_exists('id_admin', $_SESSION) && array_key_exists('nom', $_SESSION) && 
-array_key_exists('prenom', $_SESSION) && array_key_exists('login', $_SESSION) && 
-array_key_exists('email', $_SESSION) && $_SESSION['id_admin'] != 4 
-&& ($_SESSION['id_admin'] == 1 || $_SESSION['id_admin'] == 2)) { */
 
 
 
@@ -68,6 +64,6 @@ $sth->execute([
 
 header('location:../php/index.php?ind=langages');
 
-//} else { echo 'Acces interdit';} ?>
+} else { echo 'Acces interdit';} ?>
 
 
