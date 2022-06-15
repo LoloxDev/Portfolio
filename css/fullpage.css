@@ -127,6 +127,7 @@ html.fp-enabled,
     left: 0 !important;
     right: 0;
     margin: 0 auto !important;
+    display: none;
 }
 .fp-slidesNav.fp-bottom {
     bottom: 17px;

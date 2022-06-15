@@ -90,7 +90,7 @@ elseif ($_GET['ind'] == 'user') {
         <ul>
 
             <li>
-                <a href="../index.html">
+                <a href="../index.php">
                     Retour au site
                 </a>
             </li>

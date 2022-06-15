@@ -1,3 +1,8 @@
+<?php
+    include_once dirname(__FILE__) . './fonctions/connexion_sgbd.php';
+    $sgbd= connexion_sgbd();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -355,16 +360,39 @@
                     </li>
                 </ul>
 
+
+
+                        // On affiche le tableau 
+
+                        
+
+                
+
                 <ul id="slidelist">
 
-                    <li class="slide">
-                        <div class="descr">
-                            <h3>Jadoo</h3>
-                        </div>
-                        
-                    </li>
+                <?php
 
-                    <li class="slide">
+                $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
+                        FROM utilisateurs INNER JOIN images ON projets.id_projet = images.id_projet');
+
+                        $requete->execute();
+
+                        $resultat_requete = $requete->fetchAll((PDO::FETCH_ASSOC));
+
+                        foreach( $resultat_requete as $projets ) {
+
+                            echo '                    
+                                    <li class="slide">
+                                        <div class="descr">
+                                            <h3>'.($projets['nom']).'zqezqd</h3>
+                                        </div>
+                                        
+                                    </li>'
+                        }
+
+
+
+                    /* <li class="slide">
                         <div class="descr">
                             <h3>Reservia</h3>
                         </div>
@@ -391,7 +419,9 @@
                         <div class="descr">
                             <h3>Gites de Montigny</h3>
                         </div>
-                    </li>
+                    </li>*/
+
+                ?>
 
                 </ul>
 
