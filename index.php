@@ -361,19 +361,14 @@
                 </ul>
 
 
-
-                        // On affiche le tableau 
-
-                        
-
-                
+    
 
                 <ul id="slidelist">
 
                 <?php
 
                 $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
-                        FROM utilisateurs INNER JOIN images ON projets.id_projet = images.id_projet');
+                        FROM projets INNER JOIN images ON projets.id_projet = images.id_projet');
 
                         $requete->execute();
 
@@ -384,10 +379,16 @@
                             echo '                    
                                     <li class="slide">
                                         <div class="descr">
-                                            <h3>'.($projets['nom']).'zqezqd</h3>
+                                            <h3>'.($projets['nom']).'</h3>
+                                            <p class="paraph">'.($projets['objectif']).'</p>
+                                            <p class="paraph">'.($projets['statut']).'</p>
+                                        </div>
+                                        <div class="containeurillu">
+                                            <img class="illuProj" src="img/'.($projets['src']).'" alt ="'.($projets['alt']).'"/>
                                         </div>
                                         
-                                    </li>'
+                                        
+                                    </li>';
                         }
 
 
@@ -755,7 +756,7 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript">
         $(window).load(function() {
-        $("#loader").fadeOut(1999); })
+        $("#loader").fadeOut(1500); })
         </script>
 
     </body>

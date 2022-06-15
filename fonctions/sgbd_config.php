@@ -9,7 +9,7 @@
 $sgbd_type = "mysql";
 $sgbd_server = "localhost";
 $sgbd_port = "0";
-$sgbd_name = "Portfolio";
+$sgbd_name = "portfolio";
 $sgbd_user = "root";
 $sgbd_pass = "root";
 $sgbd_prefix = "";

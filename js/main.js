@@ -43,6 +43,9 @@ function closeForm2() {
         const boxes = Array.from(
             document.getElementsByClassName('jauge')
           );
+          const slideNav = Array.from(
+            document.getElementsByClassName('fp-slidesNav')
+          );
         const wavesboxes = Array.from(
             document.getElementsByClassName('wavesbox')
           );
@@ -51,6 +54,9 @@ function closeForm2() {
     })
         wavesboxes.forEach(box => {
         box.style.display = 'none';
+    })
+        slideNav.forEach(box => {
+        box.style.display = 'block';
     })
     document.getElementById("fp-nav").style.display= "none";
     document.getElementById("slidelist").style.display= "block";

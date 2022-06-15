@@ -596,7 +596,7 @@ header::after {
 .waves {
     bottom: 0;
     width: 100%;
-    height: 0%;
+    height: 0;
     margin-bottom: -7px; /*Fix for safari gap*/
     min-height: 0;
     max-height: 150px;
@@ -1739,37 +1739,12 @@ right: 22%;
     border: 1px solid #53af57;
 }
 
-#connect h1{
-    z-index: 1;
-}
-
 /* SLIDELIST */
 
 #slidelist {
     height: 100%;
     display: none;
     padding: 30px;
-}
-
-#slidelist li:first-of-type{
-    background:url('https://i.gyazo.com/cc9304e22b64a134c815554456e48790.jpg') no-repeat;
-}
-
-#slidelist li:nth-of-type(2){
-    background:url('https://i.gyazo.com/cf8504cf9db38aa614c8e0262c1443f9.png') no-repeat;
-}
-
-#slidelist li:nth-of-type(3){
-    background:url('https://i.gyazo.com/abaf34d0b61fc53f502fb002ff3523b1.png') no-repeat;
-}
-/* LIEN SPRINGFIELD https://pctronique.fr/project/springfield/index.php?ind=cat&cat=3 */
-
-#slidelist li:nth-of-type(4){
-    background:url('https://i.gyazo.com/dd599ee27c8c56017115a3135f170848.jpg') no-repeat;
-}
-
-#slidelist li:last-of-type{
-    background:url('https://i.gyazo.com/65d4f03be4fcca377e11e83179fea259.jpg') no-repeat;
 }
 
 #slidelist li{
@@ -1779,8 +1754,15 @@ right: 22%;
 }
 
 .slide img{
-    border-radius: 10%;
+    border-radius: 0 10% 10% 0;
+    object-fit: contain;
+
     
+}
+
+.slide{
+    display: flex;
+    flex-direction: row !important;
 }
 
 .gif{
@@ -1793,19 +1775,30 @@ right: 22%;
     
 }
 
-.fp-slides .active{
-    background-position-x:-175% !important;
+.fp-slides .active .containeurillu{
+    transform: translateX(0%);
+    display: block;
+}
+
+.containeurillu{
+transition: 1s;
+width: 100%;
+height: 100%;
+display: none;
 }
 
 .slide h3{
-    z-index: -1;
     margin-left: 200px;
+    top: 40px;
 }
 
 .descr{
     width: 50%;
+    z-index: -10;
+    padding-top: 75px;
 }
 
-.fp-slides li:hover{
-    background-position-x:0 !important;
+
+.paraph{
+    margin-top: 150px;
 }
