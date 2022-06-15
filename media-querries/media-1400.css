@@ -16,3 +16,7 @@
 .a4 h4{
     margin-bottom: 50px;
 }
+
+.fp-slides .active{
+    background-position-x:-50% !important;
+}

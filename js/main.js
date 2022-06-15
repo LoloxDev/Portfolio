@@ -7,6 +7,8 @@ new fullpage("#fullpage", {
     navigationTooltips: ['Acceuil','Projets','Parcours','Compétences','Présentation'],
     showActiveTooltip: true,
     navigationPosition:true,
+    slidesNavigation: true,
+
 });
 
 function openForm() {
@@ -32,3 +34,27 @@ function openForm2() {
 function closeForm2() {
     document.getElementById("connect").style.display = "none";
 }
+
+
+    var fig = document.querySelector('figure');
+    fig.addEventListener('click', function() {
+    
+        document.getElementById("waterprojets").style.display = "none";
+        document.getElementById("slidelist").style.display = "block";
+        const boxes = Array.from(
+            document.getElementsByClassName('jauge')
+          );
+        const wavesboxes = Array.from(
+            document.getElementsByClassName('wavesbox')
+          );
+        boxes.forEach(box => {
+        box.style.display = 'none';
+    })
+        wavesboxes.forEach(box => {
+        box.style.display = 'none';
+    })
+    document.getElementById("fp-nav").style.display= "none";
+    document.getElementById("slidelist").style.display= "block";
+});
+
+    

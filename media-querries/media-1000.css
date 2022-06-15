@@ -75,3 +75,7 @@ h1,
 h3 {
     top: 30%;
 }
+
+.fp-slides .active{
+    background-position-x:-35% !important;
+}

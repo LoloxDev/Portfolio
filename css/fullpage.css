@@ -78,6 +78,7 @@ html.fp-enabled,
     width: 0;
     height: 0;
     border-style: solid;
+    display: none;
 }
 .fp-arrow.fp-prev {
     border-width: 38.5px 34px 38.5px 0;
@@ -129,6 +130,7 @@ html.fp-enabled,
 }
 .fp-slidesNav.fp-bottom {
     bottom: 17px;
+    width: fit-content;
 }
 .fp-slidesNav.fp-top {
     top: 17px;

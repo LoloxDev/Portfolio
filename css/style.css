@@ -539,13 +539,13 @@ header::after {
 
 /* SECTION 2 */
 
-section:nth-of-type(1) ul {
+#waterprojets {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-section:nth-of-type(1) ul li {
+#waterprojets li {
     width: 150px;
     height: 150px;
     position: absolute;
@@ -558,35 +558,35 @@ section:nth-of-type(1) ul li {
     border: groove 5px white;
 }
 
-section:nth-of-type(1) ul li:hover figure {
+#waterprojets li:hover figure {
     animation: logo-animation 1.5s ease-in-out;
     transform: scale(1.1);
 }
 
 /* BULLES */
 
-section:nth-of-type(1) ul li:first-of-type {
+#waterprojets li:first-of-type {
     left: 10%;
     top: 25%;
 }
 
-section:nth-of-type(1) ul li:nth-of-type(2) {
+#waterprojets li:nth-of-type(2) {
     left: 25%;
     top: 55%;
 }
 
-section:nth-of-type(1) ul li:nth-of-type(3) {
+#waterprojets li:nth-of-type(3) {
     left: 50%;
     top: 25%;
     margin-left: -80px;
 }
 
-section:nth-of-type(1) ul li:nth-of-type(4) {
+#waterprojets li:nth-of-type(4) {
     right: 25%;
     top: 55%;
 }
 
-section:nth-of-type(1) ul li:nth-of-type(5) {
+#waterprojets li:nth-of-type(5) {
     right: 10%;
     top: 25%;
 }
@@ -1741,4 +1741,71 @@ right: 22%;
 
 #connect h1{
     z-index: 1;
+}
+
+/* SLIDELIST */
+
+#slidelist {
+    height: 100%;
+    display: none;
+    padding: 30px;
+}
+
+#slidelist li:first-of-type{
+    background:url('https://i.gyazo.com/cc9304e22b64a134c815554456e48790.jpg') no-repeat;
+}
+
+#slidelist li:nth-of-type(2){
+    background:url('https://i.gyazo.com/cf8504cf9db38aa614c8e0262c1443f9.png') no-repeat;
+}
+
+#slidelist li:nth-of-type(3){
+    background:url('https://i.gyazo.com/abaf34d0b61fc53f502fb002ff3523b1.png') no-repeat;
+}
+/* LIEN SPRINGFIELD https://pctronique.fr/project/springfield/index.php?ind=cat&cat=3 */
+
+#slidelist li:nth-of-type(4){
+    background:url('https://i.gyazo.com/dd599ee27c8c56017115a3135f170848.jpg') no-repeat;
+}
+
+#slidelist li:last-of-type{
+    background:url('https://i.gyazo.com/65d4f03be4fcca377e11e83179fea259.jpg') no-repeat;
+}
+
+#slidelist li{
+    transition: 2s;
+    background-position: center;
+    background-size: contain;
+}
+
+.slide img{
+    border-radius: 10%;
+    
+}
+
+.gif{
+    height: 90%;
+}
+
+.closeBtn{
+    width: 26px;
+    background: darkred;
+    
+}
+
+.fp-slides .active{
+    background-position-x:-175% !important;
+}
+
+.slide h3{
+    z-index: -1;
+    margin-left: 200px;
+}
+
+.descr{
+    width: 50%;
+}
+
+.fp-slides li:hover{
+    background-position-x:0 !important;
 }
