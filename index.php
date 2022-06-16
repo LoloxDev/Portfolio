@@ -367,7 +367,7 @@
 
                 <?php
 
-                $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
+                $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.display, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
                         FROM projets INNER JOIN images ON projets.id_projet = images.id_projet');
 
                         $requete->execute();
@@ -375,9 +375,11 @@
                         $resultat_requete = $requete->fetchAll((PDO::FETCH_ASSOC));
 
                         foreach( $resultat_requete as $projets ) {
+                        
+                        if($projets['display']==1) {
 
                             echo '                    
-                                    <li class="slide">
+                                    <li class="slide" id="'.($projets['nom']).'">
                                         <div class="descr">
                                             <h3>'.($projets['nom']).'</h3>
                                             <p class="paraph">'.($projets['objectif']).'</p>
@@ -390,6 +392,8 @@
                                         
                                     </li>';
                         }
+                    
+                        };
 
 
 
@@ -751,6 +755,7 @@
             </ul>
         </div>
         <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/fullpage.js"></script>
         <script type="text/javascript" src="js/canva1.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>

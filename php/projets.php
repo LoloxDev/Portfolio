@@ -5,11 +5,7 @@
 
 <?php
 
-/* if (!empty($_SESSION) && array_key_exists('id_user', $_SESSION) && 
-array_key_exists('id_admin', $_SESSION) && array_key_exists('nom', $_SESSION) && 
-array_key_exists('prenom', $_SESSION) && array_key_exists('login', $_SESSION) && 
-array_key_exists('email', $_SESSION) && $_SESSION['id_admin'] != 4 
-&& ($_SESSION['id_admin'] == 1 || $_SESSION['id_admin'] == 2)) { */
+if($_SESSION['username'] == "LoloxDev"){
    
 ?> 
 
@@ -67,7 +63,14 @@ echo'
                 echo '<img id="add-img" src="../img/icons8-ajouter-une-image-90.png"  class="img-fluid" />
                 </div>';
             }
-            echo '<div class="col-md-12 text-center form-group">
+            echo '
+            <label class="form-switch">
+                <input type="checkbox" name="arch" checked id="">
+                <i></i>
+                <p id=""></p>                                             
+            </label>
+
+             <div class="col-md-12 text-center form-group">
                     <label for="nom">Nom :</label>
                     <input class="form-control" type="text" name="nom" text_area="Nom" placeholder="Springfield" value="'.($editInfo['nom']).'" >
 
@@ -216,26 +219,40 @@ echo'
 
                                         echo '
                                         </td>
+
                                         <td class="col-md-1 edit">
                                             <a class="tablebutton" href="index.php?ind=projets&id_edit='.($articleAdmin['pID']).'">
                                                 <img src="../img/icons8-modifier.svg" class="testcolor">
                                             </a>
                                         </td>
+
                                         <td class="col-md-1 delete">
                                             <a class="tablebutton" onclick="window.open(\'../exec/delete_produits.php?id_delete='.($articleAdmin['pID']).'\',\'pop_up\',\'width=300, height=200, toolbar=no status=no\');">
                                                 <img src="../img/poubelle.svg" class="testcolor">
                                             </a>
                                         </td>
+
+                                        <td class="col-md-1 arch">    
+
+                                            <label class="form-switch">
+                                                <input type="checkbox" checked onchange="Check(this)" id="'.($articleAdmin['pNom']).'Selector">
+                                                <i></i>
+                                                <p id="verdict'.($articleAdmin['pNom']).'"></p>                                             
+                                            </label>
+
+                                        </td>
+                                        
                                     </tr>';
 
                         }
 
                 ?>
-
             </tbody>
 
         </table>
     </div>
+
+
 </section>
 
 <script>
@@ -285,7 +302,9 @@ document.getElementById('file').addEventListener('change', loadFiles);
 document.getElementById('add-img').addEventListener('click', img_add);
 
 
+
+
 </script>
 
+<?php } else { echo 'Acces non autorisé';} ?>
 
-<?php  // } else { echo 'Acces non autorisé';} ?>

@@ -1,15 +1,3 @@
-new fullpage("#fullpage", {
-    autoScrolling: true,
-    navigation: true,
-    anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
-    fixedElements:'.nav, #loader',
-    navigationTooltips: ['Acceuil','Projets','Parcours','Compétences','Présentation'],
-    showActiveTooltip: true,
-    navigationPosition:true,
-    slidesNavigation: true,
-
-});
-
 function openForm() {
     document.getElementById("popupForm").style.display = "block";
     document.getElementById("openBtn").style.zIndex = "-1";
@@ -17,6 +5,8 @@ function openForm() {
     document.getElementById("bottom").style.display = "none";
     document.getElementById("nav").style.top ="-5px";
 }
+
+
 
 function closeForm() {
     document.getElementById("popupForm").style.display = "none";
@@ -62,4 +52,47 @@ function closeForm2() {
     document.getElementById("slidelist").style.display= "block";
 });
 
-    
+
+
+var verifList = ["verdictReservia",
+"verdictMontigny",
+"verdictEno&Lo",
+"verdictJadoo",
+"verdictSpringfield"];
+
+var checkList = ["ReserviaSelector",
+"MontignySelector",
+"Eno&LoSelector",
+"JadooSelector",
+"SpringfieldSelector"];
+
+var projList = ["Reservia",
+"Montigny",
+"Eno&Lo",
+"Jadoo",
+"Springfield"];
+
+
+
+function Check(value) {
+
+for(let i=0; i<verifList.length ; i++) {
+
+
+    if (value.id == checkList[i]) {
+
+    document.getElementById(verifList[i]).innerHTML = value.checked;
+
+    }
+
+    if ((value.id == checkList[i]) && document.getElementById(verifList[i]).innerHTML === "true") {
+        console.log("yep");
+        document.getElementById(projList[i]).style.display = "block";
+    } else if ((value.id == checkList[i]) && document.getElementById(verifList[i]).innerHTML === "false") {
+        console.log("nop");
+        document.getElementById(projList[i]).style.display = "none";
+    }
+};
+}
+
+

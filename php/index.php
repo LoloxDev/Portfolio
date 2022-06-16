@@ -7,7 +7,7 @@
     <title>BackOff</title>
     <link rel="stylesheet" href="../css/back.css" />
     <link rel="stylesheet" href="../css/normalizer.css" />
-    <link rel="shortcut icon" href="img/bitmoji.png"/>
+    <link rel="shortcut icon" href="../img/bitmoji.png"/>
     <link rel="apple-touch-icon" href="img/bitmoji.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,8 @@
         rel="stylesheet"
     />
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script type="text/javascript" src="../js/back.js"></script>
+    
 </head>
 <body>
     
@@ -116,8 +118,11 @@ elseif ($_GET['ind'] == 'user') {
         </ul>
     </nav>
 
-    
+
 </body>
+
+
 </html>
 
 <?php } else { echo'Acces refusé'; }?>
+

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 session_start();
 if($_SESSION['username'] == "LoloxDev"){
@@ -15,26 +15,14 @@ function validation_donnees($donnees){
     return $donnees;
 }
 
-$nom = validation_donnees($_POST["nom"]);
-$statut = validation_donnees($_POST["statut"]);
-$message = validation_donnees($_POST["story"]);
-$archive = 0;
-//$langages = validation_donnees($_POST["langages"]);
+$id_projet = validation_donnees($_POST["id_"]);
 
-echo($archive);
-
-if(isset($_POST["arch"])){
-    $archive= 1;
-}
-
-$sth = $sgbd->prepare(" UPDATE projets SET projets.nom = :nom, projets.statut = :statut, projets.objectif = :msg, projets.display = :disp
- WHERE projets.id_projet=:id_projet");
+$sth = $sgbd->prepare(" UPDATE langages SET langages.nom = :nom, langages.type = :type
+ WHERE langages.id_langage=:id_langage");
 
 $sth->bindParam(':nom',$nom);
-$sth->bindParam(':statut',$statut);
-$sth->bindParam(':msg',$message);
-$sth->bindParam(':id_projet',$_GET["id_edit"]);
-$sth->bindParam(':disp',$archive);
+$sth->bindParam(':type',$type);
+$sth->bindParam(':id_langage',$_GET["id_edit"]);
 $sth->execute();
 /* Pour les modifications, Rajouter un if else ( SI la page existe alors la modifier SINON la créer ) */
 /* Pour rajouter la photos, créer une autre requetes sql INSERT aec le $id_produit */
@@ -62,8 +50,13 @@ $sth->execute();
 }
 
 
-header('location:../php/index.php?ind=projets');
+header('location:../php/index.php?ind=langages');
 
 } else { echo 'Acces interdit';}
+
+
+
+
+INSERT INTO table1 (colonne1, colonne2) SELECT col1, col2 FROM table 2
 
 ?>
