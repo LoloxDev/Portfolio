@@ -5,6 +5,10 @@
     left:50%;
 }
 
+h3::before,h3::after{
+    display: none;
+}
+
 section, .a2{
     padding: 0;
 }
@@ -47,48 +51,7 @@ header{
     right: 20%;
 }
 
-section:nth-of-type(1) ul li:first-of-type {
-    top:8%;
-}
 
-section:nth-of-type(1) ul li:nth-of-type(2) {
-    top:23%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(3) {
-    top:38%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(4) {
-    top:53%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(5) {
-    top:68%;
-}
-
-.active li:first-of-type figure{
-    transition: all 0.3s linear 0.8s;
-}
-
-.active li:nth-of-type(2) figure {
-    transition: all 0.3s linear 1.2s;
-}
-
-
-.active li:nth-of-type(3) figure {
-    transition: all 0.3s linear 1.6s;
-}
-
-
-.active li:nth-of-type(4) figure {
-    transition: all 0.3s linear 2s;
-}
-
-
-.active li:nth-of-type(5) figure {
-    transition: all 0.3s linear 2.4s;
-}
 
 .gridContain{
     top:12%;

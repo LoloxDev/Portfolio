@@ -130,7 +130,7 @@
 
                             <li>
                                 <a href="CV_STAGE.pdf" download>
-                                    <img src="img/cv.png" alt="Une cv" />
+                                    <span class="iconify" data-icon="academicons:cv-square" style="color: white; font-size: 50px;"></span>
                                 </a>
                             </li>
                         </ul>
@@ -367,7 +367,7 @@
 
                 <?php
 
-                $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.display, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
+                $requete = $sgbd->query ('SELECT projets.nom, projets.statut, projets.objectif, projets.id_projet, images.src, images.alt, images.id_projet 
                         FROM projets INNER JOIN images ON projets.id_projet = images.id_projet');
 
                         $requete->execute();
@@ -376,7 +376,6 @@
 
                         foreach( $resultat_requete as $projets ) {
                         
-                        if($projets['display']==1) {
 
                             echo '                    
                                     <li class="slide" id="'.($projets['nom']).'">
@@ -393,7 +392,7 @@
                                     </li>';
                         }
                     
-                        };
+                        ;
 
 
 
@@ -686,7 +685,8 @@
                 <p>
                     Anciennement cuisinier, j'ai décidé de me réorienter vers
                     le développement informatique car j'y ai découvert un
-                    univers passionant.
+                    univers passionant.<br/><br/>
+                    Je suis actuellement à la recherche d'un stage de 2 mois pour la période septembre/octobre 2022, n'hésitez surtout pas à me contacter!
                 </p>
                 <div id="footer">
                     <p id="rights">© Copyright 2022 - All rights reserved - Webdesign by Loris Labarre</p>

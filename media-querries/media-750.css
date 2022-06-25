@@ -6,7 +6,7 @@ header{
     display: none;
 }
 .a2{
-    padding: 150px 0 0 0;
+    padding: 70px 0 0 0;
 }
 
 .jauge{
@@ -26,59 +26,18 @@ section:nth-of-type(1) ul li {
     width: 100px;
     height: 100px;
     left:50% !important;
-    margin-left: -50px !important;
+    margin-left: -52px !important;
 }
 
-section:nth-of-type(1) ul li:first-of-type {
-    top:0;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(2) {
-    top:15%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(3) {
-    top:30%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(4) {
-    top:45%;
-}
-
-section:nth-of-type(1) ul li:nth-of-type(5) {
-    top:60%;
-}
 
 .active .waves {
-    height: 250px !important;
+    height: 100px !important;
     border-radius: unset;
 }
 
-.active li:first-of-type figure{
-    transition: all 0.3s linear 1s;
-}
-
-.active li:nth-of-type(2) figure {
-    transition: all 0.3s linear 1.4s;
-}
-
-
-.active li:nth-of-type(3) figure {
-    transition: all 0.3s linear 1.8s;
-}
-
-
-.active li:nth-of-type(4) figure {
-    transition: all 0.3s linear 2.1s;
-}
-
-
-.active li:nth-of-type(5) figure {
-    transition: all 0.3s linear 2.4s;
-}
 
 .active .r1{
-    transition: all 3s linear 0.5s;
+    transition: all 3.2s linear 0.4s;
 }
 
 #Jadoo img{
@@ -124,18 +83,50 @@ section:nth-of-type(1) ul li:nth-of-type(5) {
     
 }
 
-.gridContain{
-
-    left: 50%;
-    margin-left: -150px;
-    top: 25%;
-    bottom: unset;
+#waterprojets li{
+    width: 100px;
+    height: 100px;
 }
 
-.gridContain2{
+#waterprojets li:first-of-type {
+    top:8%;
+}
 
-    right: 50%;
-    margin-right: -150px;
-    bottom: 10%;
-    top:unset;
+#waterprojets li:nth-of-type(2) {
+    top:23%;
+}
+
+#waterprojets li:nth-of-type(3) {
+    top:38%;
+}
+
+#waterprojets li:nth-of-type(4) {
+    top:53%;
+}
+
+#waterprojets li:nth-of-type(5) {
+    top:68%;
+}
+
+.active li:first-of-type figure{
+    transition: all 0.3s linear 0.8s;
+}
+
+.active li:nth-of-type(2) figure {
+    transition: all 0.3s linear 1.2s;
+}
+
+
+.active li:nth-of-type(3) figure {
+    transition: all 0.3s linear 1.6s;
+}
+
+
+.active li:nth-of-type(4) figure {
+    transition: all 0.3s linear 2s;
+}
+
+
+.active li:nth-of-type(5) figure {
+    transition: all 0.3s linear 2.4s;
 }

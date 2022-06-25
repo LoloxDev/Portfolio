@@ -57,14 +57,20 @@ h1,h3{
 
 .gridContain{
 
-    left: 8%;
-    top: 40%;
+    left: 50%;
+    margin-left: -175px;
+    top: 20%;
+    bottom: unset;
+    row-gap: 10px;
 }
 
 .gridContain2{
 
-    right: 8%;
-    top: 40%
+    right: 50%;
+    margin-right: -175px;
+    bottom: 10%;
+    top:unset;
+    row-gap: 10px;
 }
 
 .login-popup {
