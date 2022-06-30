@@ -10,7 +10,7 @@ header{
 }
 
 .jauge{
-    display: none;
+    display: none !important;
 }
 
 .j1{
@@ -20,13 +20,6 @@ header{
 
 .wavesbox{
     bottom: 7px;
-}
-
-section:nth-of-type(1) ul li {
-    width: 100px;
-    height: 100px;
-    left:50% !important;
-    margin-left: -52px !important;
 }
 
 
@@ -56,13 +49,13 @@ section:nth-of-type(1) ul li {
 
 .fp-viewing-section3 #myLife{
     transform: rotate(90deg);
-    width : 700px;
-    margin-left: -350px;
+    width : 580px;
+    margin-left: -280px;
     left:50%;
 }
 
 .a3 h3{
-    top: 0;
+    top: 10%;
 }
 
 #myLife li span{
@@ -84,29 +77,12 @@ section:nth-of-type(1) ul li {
 }
 
 #waterprojets li{
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
+    margin: 50px auto  !important;
+    position: initial;
 }
 
-#waterprojets li:first-of-type {
-    top:8%;
-}
-
-#waterprojets li:nth-of-type(2) {
-    top:23%;
-}
-
-#waterprojets li:nth-of-type(3) {
-    top:38%;
-}
-
-#waterprojets li:nth-of-type(4) {
-    top:53%;
-}
-
-#waterprojets li:nth-of-type(5) {
-    top:68%;
-}
 
 .active li:first-of-type figure{
     transition: all 0.3s linear 0.8s;
@@ -129,4 +105,8 @@ section:nth-of-type(1) ul li {
 
 .active li:nth-of-type(5) figure {
     transition: all 0.3s linear 2.4s;
+}
+
+#buttproj{
+    display: none;
 }

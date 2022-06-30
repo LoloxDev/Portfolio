@@ -17,3 +17,7 @@ section::before{
 header::after {
     right: 85%;
 }
+
+#buttproj{
+    margin-right: 0;
+}

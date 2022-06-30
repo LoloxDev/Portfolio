@@ -48,6 +48,11 @@
             media="screen and (max-width: 400px)"
             href="media-querries/media-400.css"
         />
+        <link
+            rel="stylesheet"
+            media="screen and (max-height: 700px) and (max-width: 400px)"
+            href="media-querries/media-700-400.css"
+        />
 
         <link rel="stylesheet/less" type="text/css" href="css/monStyle.less">
         <link rel="stylesheet/scss" type="text/css" src="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css">
@@ -471,6 +476,7 @@
                             />
                         </g>
                     </svg>
+                </div>
                     
 
                 <div id="buttproj">

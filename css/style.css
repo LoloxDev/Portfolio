@@ -403,7 +403,7 @@ h3 {
 }
 
 .a3 h3{
-    top:20%
+    top:15%
 }
 
 section:first-of-type h1 {
@@ -664,7 +664,7 @@ section:nth-of-type(1) figure img {
     height: 100%;
 }
 
-#Jadoo img {
+#waterprojets #Jadoo img {
     width: 50%;
     height: 50%;
     margin: 35px auto;
@@ -693,7 +693,7 @@ section:nth-of-type(1) figure img {
 
 .j1 {
     left: 50%;
-    margin-left: -3px;
+    margin-left: -3.5px;
     top: 0;
     height: 400px;
     opacity: 0;
@@ -1466,7 +1466,7 @@ top: 20%;
     content: "";
     position: absolute;
     width: 2px;
-    height: 50px;
+    height: 40px;
     background-color: silver;
 }
 
@@ -1598,7 +1598,7 @@ top: 20%;
 }
 
 #footer{
-    margin:100px auto 0 auto;
+    margin:10px auto 0 auto;
     text-align: center;
 }
 
@@ -1740,22 +1740,18 @@ top: 20%;
     padding: 30px;
 }
 
-#slidelist li{
-    transition: 2s;
-    background-position: center;
-    background-size: contain;
-}
 
 .slide img{
-    border-radius: 0 10% 10% 0;
-    object-fit: contain;
+    border-radius: 15px;
+    object-fit: cover;
+    width: 100%;
 
     
 }
 
 .slide{
     display: flex;
-    flex-direction: row !important;
+
 }
 
 .gif{
@@ -1768,40 +1764,35 @@ top: 20%;
     
 }
 
-.fp-slides .active .containeurillu{
-    transform: translateX(0%);
-    display: block;
-}
 
 .containeurillu{
-transition: 1s;
 width: 100%;
-height: 100%;
-display: none;
+height: 60%;
 }
 
 .slide h3{
     margin-left: 200px;
-    top: 40px;
+    margin-bottom: 20px !important;
+    top: 0 !important;
 }
+
 
 .descr{
-    width: 50%;
+    width: 100%;
+    height: 20%;
     z-index: -10;
-    padding-top: 75px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 
-.paraph{
-    margin-top: 150px;
-}
 
 #buttproj{
-    margin-right: -110px;
+    margin-right: 50px;
     display: flex;
     position: absolute;
     right: 0;
-    bottom: 320px;
+    bottom: 435px;
     flex-direction: column;
 }
 
@@ -1890,3 +1881,4 @@ display: none;
 .projbutton:hover {
     background: rgba(255, 255, 255, 0.116);
 }
+

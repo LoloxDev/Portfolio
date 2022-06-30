@@ -7,9 +7,13 @@ section::after,section::before,header::after{
 }
 
 section{
-    padding: 150px 0 0 0;
+    padding: 70px 0 0 0;
 }
 
+header{
+    height: unset;
+    top: 0;
+}
 .a2{
     padding: 122px 50px;
 }
@@ -85,3 +89,4 @@ h3 {
 .fp-slides .active{
     background-position-x:-35% !important;
 }
+

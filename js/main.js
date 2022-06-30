@@ -25,7 +25,7 @@ function closeForm2() {
 }
 
 
-    var graphique = document.querySelectorAll('.proj, #proj2').forEach( element=> {
+    var graphique = document.querySelectorAll('#proj2').forEach( element=> {
 
             element.addEventListener('click', function() {
     
@@ -46,6 +46,9 @@ function closeForm2() {
         slideNav.forEach(box => {
         box.style.display = 'block';
     })
+        wavesboxes.forEach(box => {
+        box.style.display = 'none';
+    })
     document.getElementById("fp-nav").style.display= "none";
     document.getElementById("slidelist").style.display= "block";
 });
@@ -57,8 +60,8 @@ function closeForm2() {
 
         element.addEventListener('click', function() {
 
-    document.getElementById("waterprojets").style.display = "none";
-    document.getElementById("slidelist").style.display = "block";
+    document.getElementById("waterprojets").style.display = "block";
+    document.getElementById("slidelist").style.display = "none";
     const boxes = Array.from(
         document.getElementsByClassName('jauge')
       );
@@ -73,6 +76,9 @@ function closeForm2() {
 })
     slideNav.forEach(box => {
     box.style.display = 'none';
+})
+    wavesboxes.forEach(box => {
+    box.style.display = 'block';
 })
 document.getElementById("fp-nav").style.display= "block";
 document.getElementById("slidelist").style.display= "none";

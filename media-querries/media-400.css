@@ -1,7 +1,5 @@
 .fp-viewing-section3 #myLife{
     transform: rotate(90deg);
-    width : 700px;
-    margin-left: -350px;
     left:50%;
 }
 
@@ -9,8 +7,12 @@ h3::before,h3::after{
     display: none;
 }
 
-section, .a2{
+section{
     padding: 0;
+}
+
+.a{
+    padding-top: 100px;
 }
 
 header{

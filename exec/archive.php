@@ -57,6 +57,4 @@ header('location:../php/index.php?ind=langages');
 
 
 
-INSERT INTO table1 (colonne1, colonne2) SELECT col1, col2 FROM table 2
-
 ?>
