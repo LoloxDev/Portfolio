@@ -27,7 +27,7 @@
 
                 <?php // Ici la requête pour le tableau
 
-                        $requeteAdmin = $sgbd->query ('SELECT utilisateurs.login, utilisateurs.mdp, utilisateurs.prenom, utilisateurs.nom, utilisateurs.mail
+                        $requeteAdmin = $sgbd->query ('SELECT utilisateurs.nom_utilisateur, utilisateurs.mot_de_passe, utilisateurs.prenom, utilisateurs.nom, utilisateurs.mail
                         FROM utilisateurs');
 
                         $requeteAdmin->execute();
@@ -40,8 +40,8 @@
 
 
                             echo   '<tr>
-                                        <td>'.($articleAdmin['login']).'</td>
-                                        <td>'.($articleAdmin['mdp']).'</td>
+                                        <td>'.($articleAdmin['nom_utilisateur']).'</td>
+                                        <td>'.($articleAdmin['mot_de_passe']).'</td>
                                         <td>'.($articleAdmin['prenom']).'</td>
                                         <td>'.($articleAdmin['nom']).'</td>
                                         <td>'.($articleAdmin['mail']).'</td>';

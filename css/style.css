@@ -839,8 +839,8 @@ section:nth-of-type(1) figure img {
 
 .gridContain {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 50px;
+    grid-template-columns: 120px 120px 120px;
+    row-gap: 50px;
     grid-template-areas:
         "title title title"
         "HTML CSS JS"
@@ -856,8 +856,8 @@ section:nth-of-type(1) figure img {
 
 .gridContain2 {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 50px;
+    grid-template-columns: 120px 120px 120px;
+    row-gap: 50px;
     grid-template-areas:
         "title2 title2 title2"
         "PSHOP AI GD"
@@ -1229,8 +1229,7 @@ section:nth-of-type(1) figure img {
 }
 
 .fp-viewing-section4 nav {
-    top: 40%;
-    line-height: unset;
+    line-height: 70px;
 }
 
 /* TEST FORM */
@@ -1609,16 +1608,10 @@ top: 20%;
 
 .fp-viewing-section4 nav li:nth-of-type(5){
     
-    height: 61px;
     position: absolute;
     right: -60px;
-    top: -45px;
-    height: 80px;
-}
+    top: 10px;
 
-.fp-viewing-section4 nav{
-    
-right: 22%;
 }
 
 .fp-viewing-section4 .cup{
@@ -1656,7 +1649,7 @@ right: 22%;
     left: 50%;
     top: 50%;
     margin-top: -80px;
-    margin-left: -80px;
+    margin-left: -50px;
     border: 1px silver solid;
     border-radius: 100%;
 }
