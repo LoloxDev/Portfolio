@@ -37,12 +37,12 @@ body {
         transform: scale(1) rotateY(0) translateX(0%);
     }
     30% {
-        -webkit-transform: scale(1.2) rotateY(180deg) translateY(160%);
-        transform: scale(1.2) rotateY(180deg) translateY(160%);
+        -webkit-transform: scale(1.2) rotateY(180deg) translateY(80%);
+        transform: scale(1.2) rotateY(180deg) translateY(80%);
     }
     48% {
-        -webkit-transform: scale(1) rotateY(0deg) translateY(-60%);
-        transform: scale(1) rotateY(0deg) translateY(-60%);
+        -webkit-transform: scale(1) rotateY(0deg) translateY(-40%);
+        transform: scale(1) rotateY(0deg) translateY(-40%);
     }
     51% {
         -webkit-transform: scale(1) rotateY(0deg);

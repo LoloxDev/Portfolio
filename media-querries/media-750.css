@@ -83,6 +83,10 @@ header{
     position: initial;
 }
 
+#waterprojets #Jadoo img {
+    margin: 15px auto;
+}
+
 
 .active li:first-of-type figure{
     transition: all 0.3s linear 0.8s;
