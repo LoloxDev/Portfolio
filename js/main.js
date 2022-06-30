@@ -25,8 +25,9 @@ function closeForm2() {
 }
 
 
-    var fig = document.querySelector('figure');
-    fig.addEventListener('click', function() {
+    var graphique = document.querySelectorAll('.proj, #proj2').forEach( element=> {
+
+            element.addEventListener('click', function() {
     
         document.getElementById("waterprojets").style.display = "none";
         document.getElementById("slidelist").style.display = "block";
@@ -42,9 +43,6 @@ function closeForm2() {
         boxes.forEach(box => {
         box.style.display = 'none';
     })
-        wavesboxes.forEach(box => {
-        box.style.display = 'none';
-    })
         slideNav.forEach(box => {
         box.style.display = 'block';
     })
@@ -52,9 +50,48 @@ function closeForm2() {
     document.getElementById("slidelist").style.display= "block";
 });
 
+    });
 
 
-var verifList = ["verdictReservia",
+    var graphique2 = document.querySelectorAll('#proj1').forEach( element=> {
+
+        element.addEventListener('click', function() {
+
+    document.getElementById("waterprojets").style.display = "none";
+    document.getElementById("slidelist").style.display = "block";
+    const boxes = Array.from(
+        document.getElementsByClassName('jauge')
+      );
+      const slideNav = Array.from(
+        document.getElementsByClassName('fp-slidesNav')
+      );
+    const wavesboxes = Array.from(
+        document.getElementsByClassName('wavesbox')
+      );
+    boxes.forEach(box => {
+    box.style.display = 'block';
+})
+    slideNav.forEach(box => {
+    box.style.display = 'none';
+})
+document.getElementById("fp-nav").style.display= "block";
+document.getElementById("slidelist").style.display= "none";
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+/* var verifList = ["verdictReservia",
 "verdictMontigny",
 "verdictEno&Lo",
 "verdictJadoo",
@@ -93,6 +130,6 @@ for(let i=0; i<verifList.length ; i++) {
         document.getElementById(projList[i]).style.display = "none";
     }
 };
-}
+} */
 
 

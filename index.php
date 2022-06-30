@@ -301,7 +301,7 @@
                 <ul id="waterprojets">
                     <li>
                         <a>
-                            <figure id="Jadoo">
+                            <figure id="Jadoo" class="proj">
                                 <img
                                     src="img/logo_jadoo_1.svg"
                                     alt="Logo Jadoo"
@@ -312,9 +312,8 @@
                     </li>
 
                     <li>
-                        <a
->
-                            <figure id="Reservia">
+                        <a>
+                            <figure id="Reservia" class="proj">
                                 <img
                                     src="img/reservia_logo.svg"
                                     alt="Logo Reservia"
@@ -325,8 +324,8 @@
                     </li>
 
                     <li>
-                        <a href="pctronique.fr/project/springfield/">
-                            <figure id="Springfield">
+                        <a>
+                            <figure id="Springfield" class="proj">
                                 <img
                                     src="img/hommer.png"
                                     alt="Logo Springfield"
@@ -337,10 +336,8 @@
                     </li>
 
                     <li>
-                        <a
-                            href="https://loloxdev.github.io/Projet_commun_EnoLo/"
-                        >
-                            <figure id="Enolo">
+                        <a>
+                            <figure id="Enolo" class="proj">
                                 <img src="img/logoblanc.png" alt="Logo Enolo" />
                                 <figcaption></figcaption>
                             </figure>
@@ -348,8 +345,8 @@
                     </li>
 
                     <li>
-                        <a href="https://loloxdev.github.io/GitesMontigny/">
-                            <figure id="Gites">
+                        <a>
+                            <figure id="Gites" class="proj">
                                 <img
                                     src="img/logo_pisserotte.png"
                                     alt="Logo Pisserotte"
@@ -397,36 +394,16 @@
 
 
 
-                    /* <li class="slide">
-                        <div class="descr">
-                            <h3>Reservia</h3>
-                        </div>
-                    </li>
+                    ?>
 
-                    <li class="slide">
-                        <div class="descr">
-                            <h3>Springfield</h3>
-                        </div>
+
                         <!-- CODE POUR GIF -->
                          <!-- <div class="gif">
                              <button class="closeBtn" onclick="closeGif()">X</button>
                             <img src="https://i.gyazo.com/be6d09e07641ff12dc148db0c4409588.gif" alt="Image from Gyazo" width="1280"/>
                         </div> --> 
-                    </li>
+    
 
-                    <li class="slide">
-                        <div class="descr">
-                            <h3>Eno&Lo</h3>
-                        </div>
-                    </li>
-
-                    <li class="slide">
-                        <div class="descr">
-                            <h3>Gites de Montigny</h3>
-                        </div>
-                    </li>*/
-
-                ?>
 
                 </ul>
 
@@ -495,7 +472,32 @@
                             />
                         </g>
                     </svg>
+                    
+
+                <div id="buttproj">
+
+                    <button id="proj1" class="projbutton" type="button">
+                        <div class='line'></div> 
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <span>1</span>
+                    </button>
+
+                    <button id="proj2" class="projbutton" type="button">
+                        <div class='line'></div> 
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <span>2</span>
+                    </button>
+
                 </div>
+                    
             </section>
 
             <section class="section a3">
