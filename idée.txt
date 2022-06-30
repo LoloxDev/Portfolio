@@ -10,3 +10,4 @@ edit pour les langages ( Supprimer puis rr ajouteles nouveaux ) via une requete 
 
 ajouter option 1 ou 2 pour page projets ( présentation ou graphique )
 
+Mettre le formulaire de connexion sur la tasse avec if user = connecté { lien back office } else { lien connexion }
