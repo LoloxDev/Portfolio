@@ -299,8 +299,8 @@
                         <img src="img/icons8-double-bas-64.png" alt="Fleche" />
                     </div>
 
-                    <div id="loader">
-                        <div id="imgLoader">
+                    <div id="loader" class="box">
+                        <div id="imgLoader" class="circle">
                             <img src="img/Logo_loris.png" alt="Logo du site"/>
                         </div>
                     </div>

@@ -1392,7 +1392,7 @@ label[for="valid"]{
     bottom: -3px;
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
-    height: 3px;
+    height: 1px;
     background: radial-gradient(
         circle,
         rgba(226, 56, 251, 1) 23%,
@@ -1409,14 +1409,14 @@ label[for="valid"]{
 }
 .portfolio-experiment .line.-right,
 .portfolio-experiment .line.-left {
-    width: 3px;
+    width: 1px;
     bottom: -3px;
     top: -3px;
     transform: scale3d(1, 0, 1);
 }
 .portfolio-experiment .line.-top,
 .portfolio-experiment .line.-bottom {
-    height: 3px;
+    height: 1px;
     left: -3px;
     right: -3px;
     transform: scale3d(0, 1, 1);
@@ -2068,3 +2068,87 @@ height: 60%;
     }
 
 }
+
+/* Animation sur loader */
+
+
+.box {
+    position: relative;
+    color: #f1f1f1;
+    cursor: pointer;
+    /* background: red; */
+    transition: transform 0.4s cubic-bezier(0.23,1.83,0.42,1.19);
+}
+
+.box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-family: Righteous; 
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* background: blue; */
+    border: 3px solid #f1f1f1;
+    animation: 1s linear infinite alternate boxMagic,
+               4s linear infinite spinning;
+    padding-top: 340px;
+}
+
+@keyframes boxMagic {
+    from {
+        box-shadow: 
+        0 0 0 #feac5e,
+        0 0 0 #c779d0,
+        0 0 0 #4bc0c8,
+        0 0 0 #42db75;
+    }
+    to {
+        box-shadow: 
+        0 -10px 0 #feac5e,
+        -10px 0 0 #c779d0,
+        0 10px 0 #4bc0c8,
+        10px 0 0 #42db75;
+    }
+}
+@keyframes spinning {
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .circle {
+        width: 200px;
+        height: 200px;
+        padding-top: 210px;
+    }
+    @keyframes boxMagic {
+        from {
+            box-shadow: 
+            0 0 0 #feac5e,
+            0 0 0 #c779d0,
+            0 0 0 #4bc0c8,
+            0 0 0 #42db75;
+        }
+        to {
+            box-shadow: 
+            0 -6px 0 #feac5e,
+            -6px 0 0 #c779d0,
+            0 6px 0 #4bc0c8,
+            6px 0 0 #42db75;
+        }
+    }
+}
+;
