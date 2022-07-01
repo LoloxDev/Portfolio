@@ -6,7 +6,7 @@ le moyen d'archiver projet
 
 ajouter une popup pour les projets et tout afficher en SQL OK
 
-edit pour les langages ( Supprimer puis rr ajouteles nouveaux ) via une requete apars qui suppr tous les id_lang par id_projet
+edit pour les langages ( Suppjrimer puis rr aouteles nouveaux ) via une requete apars qui suppr tous les id_lang par id_projet
 
 ajouter option 1 ou 2 pour page projets ( présentation ou graphique )
 
