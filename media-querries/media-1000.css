@@ -65,7 +65,7 @@ h1,h3{
     margin-left: -180px;
     top: 15%;
     bottom: unset;
-    row-gap: 10px;
+    row-gap: 0px;
 }
 
 .gridContain2{
@@ -74,7 +74,12 @@ h1,h3{
     margin-right: -180px;
     bottom: 10%;
     top:unset;
-    row-gap: 10px;
+    row-gap: 0px;
+}
+
+.gridContain figcaption,
+.gridContain2 figcaption{
+    height: unset;
 }
 
 .login-popup {

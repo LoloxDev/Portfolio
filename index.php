@@ -1,6 +1,7 @@
 <?php
     include_once dirname(__FILE__) . './fonctions/connexion_sgbd.php';
     $sgbd= connexion_sgbd();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +80,7 @@
             
 
             <div class="section a1">
-                <a onclick="openForm2()" id="back"></a>
+                
                 <div id="connect">
                     <form action="exec/verifications.php" method="POST">
 
@@ -140,7 +141,11 @@
                             </li>
                         </ul>
 
-                        <div class="cup"></div>
+                        <a class="cup" <?php if($_SESSION['username'] == "LoloxDev") {  
+                            echo 'href="php/index.php"';
+                         } else {
+                            echo'onclick="openForm2()"';
+                         } ?> ></a>
                     </nav>
                 </header>
 
@@ -557,118 +562,53 @@
                 <div class="gridContain">
                     <h4>Mes compétences en programmation</h4>
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:html-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>HTML</figcaption>
-                    </figure>
+                    <?php
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:css-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>CSS</figcaption>
-                    </figure>
+                        $requete1 = $sgbd->query ('SELECT langages.nom, langages.type, langages.id_langage, langages.id_img, images.src, images.alt, images.id_img 
+                        FROM langages INNER JOIN images ON langages.id_img = images.id_img WHERE langages.type = "Programmation"');
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:javascript-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>JavaScript</figcaption>
-                    </figure>
+                        $requete1->execute();
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="cib:mysql"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>MySQL</figcaption>
-                    </figure>
+                        $resultat_requete1 = $requete1->fetchAll((PDO::FETCH_ASSOC));
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:php-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>PHP</figcaption>
-                    </figure>
+                        foreach( $resultat_requete1 as $langages1 ) {
+                        
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:bootstrap-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>Bootstrap</figcaption>
-                    </figure>
+                            echo '                    
+                                    <figure>
+                                        '.($langages1['src']).'
+                                        <figcaption>'.($langages1['nom']).'</figcaption>
+                                    </figure>';
+                        };
+
+                    ?>
+
                 </div>
 
                 <div class="gridContain2">
                     <h4>Mes compétences en design</h4>
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="cib:adobe-photoshop"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>Photoshop</figcaption>
-                    </figure>
+                    <?php
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="cib:adobe-illustrator"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>AI</figcaption>
-                    </figure>
+                        $requete2 = $sgbd->query ('SELECT langages.nom, langages.type, langages.id_langage, langages.id_img, images.src, images.alt, images.id_img 
+                        FROM langages INNER JOIN images ON langages.id_img = images.id_img WHERE langages.type = "Design"');
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="file-icons:gravit-designer"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>GravitD</figcaption>
-                    </figure>
+                        $requete2->execute();
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="bi:wordpress"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>Wordpress</figcaption>
-                    </figure>
+                        $resultat_requete2 = $requete2->fetchAll((PDO::FETCH_ASSOC));
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="akar-icons:sass-fill"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>Sass</figcaption>
-                    </figure>
+                        foreach( $resultat_requete2 as $langages2 ) {
+                        
 
-                    <figure>
-                        <span
-                            class="iconify"
-                            data-icon="ci:adobe-xd"
-                            style="color: #27a3c2; font-size: 100px"
-                        ></span>
-                        <figcaption>XD</figcaption>
-                    </figure>
+                            echo '                    
+                                    <figure>
+                                        '.($langages2['src']).'
+                                        <figcaption>'.($langages2['nom']).'</figcaption>
+                                    </figure>';
+                        }; 
+                    ?>
                 </div>
+                
                 <div class="ocean">
                     <div class="bubble bubble--1"></div>
                     <div class="bubble bubble--2"></div>
