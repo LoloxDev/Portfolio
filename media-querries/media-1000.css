@@ -62,8 +62,8 @@ h1,h3{
 .gridContain{
 
     left: 50%;
-    margin-left: -175px;
-    top: 20%;
+    margin-left: -180px;
+    top: 15%;
     bottom: unset;
     row-gap: 10px;
 }
@@ -71,7 +71,7 @@ h1,h3{
 .gridContain2{
 
     right: 50%;
-    margin-right: -175px;
+    margin-right: -180px;
     bottom: 10%;
     top:unset;
     row-gap: 10px;

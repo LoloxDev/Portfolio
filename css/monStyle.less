@@ -95,12 +95,13 @@
   
  #Clouds{
     color: #FFF;
-    position: relative;
+    position: absolute;
     z-index: -9999;
-    width: 100%;
-    top: -60%;
-    height: 300px;
+    width: 75%;
+    height: 180px;
     overflow: hidden;
+    right: 160px;
+    top: 180px;
   }
 
   .Cloud:nth-of-type(9){
@@ -109,4 +110,22 @@
 
   .Cloud:last-of-type{
     height: 20%;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px)  {
+
+  #Clouds{
+    width: 90%;
+    right: 50px;
+  }
+
+}
+
+@media screen and (max-width: 1000px){
+
+  #Clouds{
+    width: 100%;
+    right: unset;
+  }
+
 }

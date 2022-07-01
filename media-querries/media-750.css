@@ -114,3 +114,7 @@ header{
 #buttproj{
     display: none;
 }
+
+.login-popup {
+    top: -55px;
+}

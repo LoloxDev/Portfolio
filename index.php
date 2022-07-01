@@ -50,8 +50,8 @@
         />
         <link
             rel="stylesheet"
-            media="screen and (max-height: 700px) and (max-width: 400px)"
-            href="media-querries/media-700-400.css"
+            media="screen and (max-height: 750px) and (max-width: 550px)"
+            href="media-querries/media-750-550.css"
         />
 
         <link rel="stylesheet/less" type="text/css" href="css/monStyle.less">
@@ -305,7 +305,7 @@
             <section class="section a2">
                 <ul id="waterprojets">
                     <li>
-                        <a>
+                        <a href="https://loloxdev.github.io/Jadoo/">
                             <figure id="Jadoo" class="proj">
                                 <img
                                     src="img/logo_jadoo_1.svg"
@@ -317,7 +317,7 @@
                     </li>
 
                     <li>
-                        <a>
+                        <a href="https://loloxdev.github.io/LabarreLoris_2_01062021_RESERVIA/">
                             <figure id="Reservia" class="proj">
                                 <img
                                     src="img/reservia_logo.svg"
@@ -329,7 +329,7 @@
                     </li>
 
                     <li>
-                        <a>
+                        <a href="https://pctronique.fr/project/springfield/">
                             <figure id="Springfield" class="proj">
                                 <img
                                     src="img/hommer.png"
@@ -341,7 +341,8 @@
                     </li>
 
                     <li>
-                        <a>
+                        <a href="https://loloxdev.github.io/Projet_commun_EnoLo/">
+                        
                             <figure id="Enolo" class="proj">
                                 <img src="img/logoblanc.png" alt="Logo Enolo" />
                                 <figcaption></figcaption>
@@ -350,7 +351,7 @@
                     </li>
 
                     <li>
-                        <a>
+                        <a href="https://loloxdev.github.io/GitesMontigny/">
                             <figure id="Gites" class="proj">
                                 <img
                                     src="img/logo_pisserotte.png"

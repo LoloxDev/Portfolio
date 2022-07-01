@@ -56,13 +56,32 @@ header{
 
 
 .gridContain{
-    top:12%;
+    top:5%;
+    row-gap: unset;
 }
 
 .gridContain2{
-    bottom:12%;
+    bottom:5%;
+    row-gap: unset;
 }
 
 .login-popup {
     top:-50px;
+}
+
+.fp-tooltip{
+    display: none !important;
+}
+
+.myHistory{
+    margin: 20px auto 50px auto !important;
+}
+
+.form-container {
+    border-top:unset;
+    padding: 0;
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    margin: 0;
 }
