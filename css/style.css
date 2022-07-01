@@ -1704,7 +1704,7 @@ top: 20%;
     border-radius: 100%;
 }
 
-#imgLoader::after{
+/*#imgLoader::after{
     content: "";
     background-color: silver;
     height: 1px;
@@ -1724,7 +1724,7 @@ top: 20%;
     top: -20px;
     right: 0;
     animation: width 2s infinite;
-}
+}*/
 
 #connect {
     background-color: silver;
@@ -2097,7 +2097,7 @@ height: 60%;
     /* background: blue; */
     border: 3px solid #f1f1f1;
     animation: 1s linear infinite alternate boxMagic,
-               4s linear infinite spinning;
+               1.5s linear infinite spinning;
     padding-top: 340px;
 }
 
@@ -2122,8 +2122,17 @@ height: 60%;
     from {
         transform: rotate(0deg);
     }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
     to {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 
 }
