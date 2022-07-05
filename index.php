@@ -141,10 +141,10 @@
                             </li>
                         </ul>
 
-                        <a class="cup" <?php if($_SESSION['username'] == "LoloxDev") {  
-                            echo 'href="php/index.php"';
+                        <a class="cup" <?php if(empty($_SESSION['username'])) {  
+                            echo 'onclick="openForm2()"';
                          } else {
-                            echo'onclick="openForm2()"';
+                            echo 'href="php/index.php"';
                          } ?> ></a>
                     </nav>
                 </header>
@@ -163,7 +163,7 @@
                         </a>
                         <a href="https://www.linkedin.com/in/loris-labarre/">
                             <img
-                                src="img/icons8-linkedin-entouré.svg"
+                                src="img/icons8-linkedin-entoure.svg"
                                 alt="Icone de linkedin"
                             />
                         </a>

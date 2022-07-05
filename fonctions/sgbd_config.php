@@ -9,8 +9,8 @@
 $sgbd_type = "mysql";
 $sgbd_server = "localhost";
 $sgbd_port = "0";
-$sgbd_name = "portfolio";
-$sgbd_user = "root";
-$sgbd_pass = "root";
+$sgbd_name = "u759207906_Portfolio";
+$sgbd_user = "u759207906_LoloxDev";
+$sgbd_pass = "Lolo499421";
 $sgbd_prefix = "";
 

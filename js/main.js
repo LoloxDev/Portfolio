@@ -24,6 +24,8 @@ function closeForm2() {
     document.getElementById("connect").style.display = "none";
 }
 
+screen.lockOrientation('landscape');
+
 
     var graphique = document.querySelectorAll('#proj2').forEach( element=> {
 

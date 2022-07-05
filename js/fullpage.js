@@ -2,7 +2,7 @@ new fullpage("#fullpage", {
     autoScrolling: true,
     navigation: true,
     anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
-    fixedElements:'.nav, #loader',
+    fixedElements:'.nav, #loader, #connect',
     navigationTooltips: ['Acceuil','Projets','Parcours','Compétences','Présentation'],
     showActiveTooltip: true,
     navigationPosition:true,

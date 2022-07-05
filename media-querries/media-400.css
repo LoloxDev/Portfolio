@@ -58,11 +58,15 @@ header{
 .gridContain{
     top:5%;
     row-gap: unset;
+    grid-template-columns: unset;
+    margin-left: -150px;
 }
 
 .gridContain2{
     bottom:5%;
     row-gap: unset;
+    grid-template-columns: unset;
+    margin-right: -150px;
 }
 
 .login-popup {

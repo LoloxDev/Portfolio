@@ -56,37 +56,23 @@ body {
 
 @keyframes logo-animation {
     20% {
-        transform: rotate(15deg) scale(1) translateX(5%);
-    }
-    30% {
-        transform: rotate(-15deg) scale(0.9) translateX(-5%) translateY(5%);
+        transform: rotate(15deg);
     }
 
     40% {
-        transform: rotate(20deg) scale(0.9) translateX(5%) translateY(5%);
-    }
-
-    50% {
-        transform: rotate(-25deg) scale(0.9) translateX(-10%) translateY(-5%);
+        transform: rotate(-10deg);
     }
 
     60% {
-        transform: rotate(30deg) scale(0.8) translateX(5%) translateY(10%);
-    }
-    70% {
-        transform: rotate(-25deg) scale(0.9) translateX(-15%) translateY(5%);
+        transform: rotate(5deg);
     }
 
     80% {
-        transform: rotate(20deg) scale(0.9) translateX(-5%) translateY(5%);
-    }
-
-    90% {
-        transform: rotate(5deg) scale(0.9) translateX(5%) translateY(-5%);
+        transform: rotate(-5deg);
     }
 
     to {
-        transform: rotate(0deg) scale(1) translateX(0%);
+        transform: rotate(0deg);
     }
 }
 
@@ -115,7 +101,7 @@ body {
 .btn .arrow {
     margin-right: 1em;
 
-    height: 2px;
+    height: 1px;
 
     width: 3em;
 
@@ -138,7 +124,7 @@ body {
 
     background: silver;
 
-    height: 1.5px;
+    height: 1px;
     width: 15px;
 }
 
@@ -168,8 +154,8 @@ body {
 
 header span {
     position: absolute;
-    bottom: -14px;
-    font-size: 1.3em;
+    bottom: -10px;
+    font-size: 1em;
     display: none;
 }
 
@@ -183,7 +169,7 @@ header span {
 
 .s2 {
     left: 41%;
-    bottom: -31px;
+    bottom: -24px;
 }
 
 .s3 {
@@ -1352,9 +1338,8 @@ label[for="valid"]{
 
 .open-btn {
     position: absolute;
-    left: 50%;
+    width:100%;
     bottom: 10%;
-    margin-left: -108px;
 }
 
 /* test button form */
@@ -1699,7 +1684,7 @@ top: 20%;
     left: 50%;
     top: 50%;
     margin-top: -80px;
-    margin-left: -50px;
+    margin-left: -50.5px;
     border: 1px silver solid;
     border-radius: 100%;
 }
@@ -1732,8 +1717,8 @@ top: 20%;
     left: 50%;
     top: 50%;
     margin-top: -200px;
-    margin-left: -150px;
-    position: absolute;
+    margin-left: -160px;
+    position: fixed;
     display: none;
 }
 

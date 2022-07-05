@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 15 juin 2022 à 14:56
+-- Généré le : mar. 05 juil. 2022 à 09:32
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.19
 
@@ -40,11 +40,11 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id_img`, `id_projet`, `src`, `alt`, `titre`) VALUES
-(1, 7, 'reservia_logo.svg', 'Le logo de Reservia', 'Reservia'),
-(2, 6, 'logo_pisserotte.png', 'Le logo de Pisserotte', 'Les gîtes de Montigny'),
-(3, 4, 'logoblanc.png', 'Le logo de Enolo', 'Enolo'),
-(4, 5, 'logo_jadoo_1.svg', 'Le logo de Jadoo', 'Jadoo'),
-(5, 3, 'hommer.png', 'Une photo de Springfield.', 'Springfield'),
+(1, 7, 'reservia_pres.png', 'Le logo de Reservia', 'Reservia'),
+(2, 6, 'gites_pres.jpg', 'Le logo de Pisserotte', 'Les gîtes de Montigny'),
+(3, 4, 'enolo_pres.jpg', 'Le logo de Enolo', 'Enolo'),
+(4, 5, 'jadoo_pres.jpg', 'Le logo de Jadoo', 'Jadoo'),
+(5, 3, 'springfield_pres.png', 'Une photo de Springfield.', 'Springfield'),
 (6, 0, '                        <span\r\n                            class=\"iconify\"\r\n                            data-icon=\"akar-icons:html-fill\"\r\n                            style=\"color: #27a3c2; font-size: 100px\"\r\n                        ></span>', 'Le logo HTML', 'HTML'),
 (7, 0, '                        <span\r\n                            class=\"iconify\"\r\n                            data-icon=\"akar-icons:css-fill\"\r\n                            style=\"color: #27a3c2; font-size: 100px\"\r\n                        ></span>', 'Le logo de CSS', 'CSS'),
 (8, 0, '                        <span\r\n                            class=\"iconify\"\r\n                            data-icon=\"akar-icons:javascript-fill\"\r\n                            style=\"color: #27a3c2; font-size: 100px\"\r\n                        ></span>', 'Le logo de JavaScript', 'JavaScrpit'),
@@ -143,20 +143,21 @@ CREATE TABLE `projets` (
   `id_img` int(10) NOT NULL,
   `objectif` varchar(255) NOT NULL,
   `statut` varchar(255) NOT NULL,
-  `nom` varchar(255) NOT NULL
+  `nom` varchar(255) NOT NULL,
+  `display` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `projets`
 --
 
-INSERT INTO `projets` (`id_projet`, `id_img`, `objectif`, `statut`, `nom`) VALUES
-(3, 5, 'Office de tourisme de Springfield, on y trouve des informations sur plusieurs lieux, bâtiments et personnages de la ville. Un back office très complet système de connexion possible.', 'Online', 'Springfield'),
-(4, 3, 'Agence de voyage permettant aux visiteurs d\'avoir une liste d\'hôtels et d\'activités en rapport avec leur recherche.', 'En cours de développement', 'Eno&Lo'),
-(5, 4, 'La plateforme du restaurant asiatique Jadoo, on y trouve quelques plats, des belles photos, un formulaire de contact ...', 'En cours de développement', 'Jadoo'),
-(6, 2, 'La plateforme des Gites de Montigny, on y trouve des belles photos, des informations sur les gites, activités, tarifs, contact ...', 'En cours de développement', 'Les gites de Montigny'),
-(7, 1, 'Agence de voyage, cartes des différents hôtels et activités', 'En cours de développement', 'Reservia'),
-(25, 19, 'test', 'En cours de développement', '');
+INSERT INTO `projets` (`id_projet`, `id_img`, `objectif`, `statut`, `nom`, `display`) VALUES
+(3, 5, 'Office de tourisme de Springfield, on y trouve des informations sur plusieurs lieux, bâtiments et personnages de la ville. Un back office très complet système de connexion possible.', 'Online', 'Springfield', 0),
+(4, 3, 'Agence de voyage permettant aux visiteurs d\'avoir une liste d\'hôtels et d\'activités en rapport avec leur recherche.', 'En cours de développement', 'Eno&Lo', 1),
+(5, 4, 'La plateforme du restaurant asiatique Jadoo, on y trouve quelques plats, des belles photos, un formulaire de contact ...', 'En cours de développement', 'Jadoo', 1),
+(6, 2, 'La plateforme des Gites de Montigny, on y trouve des belles photos, des informations sur les gites, activités, tarifs, contact ...', 'En cours de développement', 'Montigny', 1),
+(7, 1, 'Agence de voyage, cartes des différents hôtels et activités', 'En cours de développement', 'Reservia', 1),
+(25, 19, 'test', 'En cours de développement', '', 0);
 
 -- --------------------------------------------------------
 
@@ -244,7 +245,7 @@ ALTER TABLE `langages_projets`
 -- AUTO_INCREMENT pour la table `projets`
 --
 ALTER TABLE `projets`
-  MODIFY `id_projet` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_projet` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
