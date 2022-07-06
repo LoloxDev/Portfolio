@@ -304,6 +304,11 @@
                             <img src="img/Logo_loris.png" alt="Logo du site"/>
                         </div>
                     </div>
+
+                    <div id="turnphone">
+                         <p> Ce site web ne s'affiche qu'en portrait </p>
+                    </div>
+                    
                 </section>
             </div>
 

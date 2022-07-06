@@ -1340,6 +1340,7 @@ label[for="valid"]{
     position: absolute;
     width:100%;
     bottom: 10%;
+    left:0;
 }
 
 /* test button form */
@@ -1917,6 +1918,8 @@ height: 60%;
     background: rgba(255, 255, 255, 0.116);
 }
 
+
+
 /* background flotant */
 
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
@@ -2145,4 +2148,25 @@ height: 60%;
         }
     }
 }
-;
+
+#turnphone{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:99999;
+    background:#183644;
+}
+
+#turnphone p{
+    margin: auto;
+}
+
+@media (orientation: portrait) {
+    #turnphone{
+        display: flex;
+    }
+
+}
